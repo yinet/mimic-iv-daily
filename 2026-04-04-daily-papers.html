@@ -2,53 +2,240 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MIMIC-IV 重症文献日报 2026-04-04</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIMIC-IV 重症文献日报 2026-04-04（升级版）</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.7; padding: 2rem; }
-  .container { max-width: 860px; margin: 0 auto; }
-  h1 { text-align: center; font-size: 1.8rem; color: #58a6ff; margin-bottom: 0.3rem; }
-  .meta { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 2rem; }
-  .paper { background: #161b22; border: 1px solid #30363d; border-radius: 10px; padding: 1.5rem; margin-bottom: 1.5rem; }
-  .paper-title { font-size: 1.05rem; color: #79c0ff; font-weight: 600; margin-bottom: 0.3rem; }
-  .paper-title-cn { color: #8b949e; font-size: 0.88rem; margin-bottom: 0.8rem; }
-  .paper-meta { font-size: 0.78rem; color: #8b949e; margin-bottom: 1rem; }
-  .paper-meta span { background: #21262d; padding: 2px 8px; border-radius: 4px; margin-right: 6px; }
-  .section { margin-bottom: 0.75rem; }
-  .section-title { color: #f0883e; font-size: 0.82rem; font-weight: 600; margin-bottom: 0.25rem; }
-  .section-content { color: #c9d1d9; font-size: 0.86rem; padding-left: 1rem; border-left: 2px solid #30363d; }
-  .summary { background: #1c2128; border-left: 3px solid #3fb950; padding: 0.75rem 1rem; border-radius: 0 6px 6px 0; font-size: 0.86rem; color: #c9d1d9; }
-  .summary::before { content: '📝 '; }
-  .disclaimer { text-align: center; color: #8b949e; font-size: 0.78rem; margin-top: 2rem; }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.7;padding:1.5rem}
+.c{max-width:860px;margin:0 auto}
+.h{text-align:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #30363d}
+.h h1{color:#58a6ff;font-size:1.6rem;margin-bottom:0.3rem}
+.m{color:#8b949e;font-size:0.82rem}
+.br{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:0.5rem}
+.b{background:#21262d;color:#8b949e;font-size:0.72rem;padding:2px 8px;border-radius:4px}
+.s{background:#3fb95022;color:#3fb950;border:1px solid #3fb95055}
+.p{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:1.4rem;margin-bottom:1.4rem}
+.p.sb{border-color:#3fb95066}
+.t{font-size:1rem;color:#79c0ff;font-weight:600;margin-bottom:0.25rem}
+.cn{color:#8b949e;font-size:0.85rem;margin-bottom:0.6rem}
+.pm{display:flex;flex-wrap:wrap;gap:6px;font-size:0.75rem;color:#8b949e;margin-bottom:0.8rem}
+.pm span{background:#21262d;padding:2px 8px;border-radius:4px}
+.tag{display:inline-block;font-size:0.7rem;padding:1px 7px;border-radius:3px;margin-left:4px}
+.tm{background:#388bfd33;color:#58a6ff;border:1px solid #388bfd55}
+.tr{background:#f0883e33;color:#f0883e;border:1px solid #f0883e55}
+.te{background:#3fb95033;color:#3fb950;border:1px solid #3fb95055}
+.se{margin-bottom:0.75rem}
+.st{font-size:0.8rem;font-weight:600;margin-bottom:0.25rem}
+.c1{color:#f0883e}.c2{color:#a371f7}.c3{color:#58a6ff}.c4{color:#79c0ff}.c5{color:#ff7b72}.ci{color:#3fb950}
+.sc{color:#c9d1d9;font-size:0.85rem;padding-left:1rem;border-left:2px solid #30363d}
+.imp{background:#0d281f;border-left:3px solid #3fb950;padding:0.7rem 1rem;border-radius:0 6px 6px 0;font-size:0.85rem;color:#c9d1d9;margin-top:0.8rem}
+.imp::before{content:"💡 临床增量 ";color:#3fb950;font-weight:600}
+.su{background:#1c2128;border-left:3px solid #3fb950;padding:0.7rem 1rem;border-radius:0 6px 6px 0;font-size:0.85rem;color:#c9d1d9}
+.su::before{content:"📝 "}
+.ca{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:0.8rem 1rem;font-size:0.8rem;color:#8b949e;margin-top:0.8rem}
+.ca strong{color:#f0883e}
+.war{background:#2d1f0f;border:1px solid #f0883e44;border-radius:6px;padding:0.7rem 1rem;font-size:0.78rem;color:#f0883e;margin-top:0.6rem}
+.di{text-align:center;color:#484f58;font-size:0.75rem;margin-top:2rem;padding-top:1rem;border-top:1px solid #21262d}
 </style>
 </head>
 <body>
-<div class="container">
-<h1>📅 MIMIC-IV 重症文献日报</h1>
-<div class="meta">推送日期：2026-04-04 &nbsp;|&nbsp; 来源：Crossref 检索</div>
-
-<div class="paper"><div class="paper-title">Dynamic Lymphocyte Recovery Patterns Predict 90-Day Mortality in Sepsis: A Machine Learning-Enhanced Analysis of the MIMIC-IV Cohort</div><div class="paper-title-cn">脓毒症淋巴细胞恢复动态模式预测90天死亡率：基于MIMIC-IV队列的机器学习分析</div><div class="paper-meta"><span>期刊：medRxiv preprint</span><span>发表：2025-11</span><span>DOI：10.1101/2025.11.11.25339967</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">成人脓毒症伴初始淋巴细胞减少（ALC < 1.0×10⁹/L），提取自MIMIC-IV数据库，结局为90天全因死亡率。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">淋巴细胞恢复轨迹（持续抑制、部分恢复、完全恢复），人口学、合并症、入院生命体征；缺失值处理未详细说明。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">XGBoost模型预测90天死亡率，对比传统评分（APACHE-II、SOFA），AUROC=0.767，5折交叉验证。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">流程图、淋巴恢复分组对比表、Kaplan-Meier生存曲线、多模型AUROC对比、SHAP特征重要性图。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">淋巴细胞恢复轨迹是独立预后标志物；持续性淋巴抑制与死亡率增加显著相关；XGBoost+SHAP可辅助实时风险分层；局限为单数据库、回顾性。</div></div><div class="summary">动态淋巴细胞恢复模式比静态指标更能预测脓毒症90天预后，XGBoost整合这一特征后AUROC达0.767，SHAP证实其为关键驱动因子，对ICU实时风险分层有应用价值。</div></div>
-
-<div class="paper"><div class="paper-title">Machine Learning-Driven Sedation-Analgesia Optimization in Mechanically Ventilated Sepsis Patients: A Retrospective MIMIC-IV Analysis</div><div class="paper-title-cn">机械通气脓毒症患者的镇痛镇静优化：基于MIMIC-IV的回顾性机器学习分析</div><div class="paper-meta"><span>期刊：Frontiers in Pharmacology（IF≈5.0）</span><span>发表：2026-01</span><span>DOI：10.3389/fphar.2026.1673704</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">MIMIC-IV V3.0数据库，脓毒症伴气管插管和侵入性机械通气成年患者，筛选出7种镇痛镇静方案（样本量>100）。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">人口学、合并症、ICU住院时间、ICU死亡率；Cox回归筛选预后因素，LASSO回归识别7个关键预测因子。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">对比多种机器学习模型，LightGBM表现最优（AUC=0.838）；SHAP解释模型输出，识别前三位预测因子：APS III、年龄、急性肾衰竭。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">Kaplan-Meier生存曲线、Cox回归森林图、LASSO特征筛选图、多模型AUROC对比、SHAP蜂群图。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">芬太尼+咪达唑仑联合方案与更低ICU死亡率和更短ICU住院时间相关；LightGBM在预后预测中表现优于传统方法；可辅助数据驱动的临床镇痛镇静决策。</div></div><div class="summary">芬太尼联合咪达唑仑是机械通气脓毒症患者最优镇痛镇静方案；LightGBM模型AUC达0.838，SHAP分析显示APS III、年龄和急性肾衰竭是28天死亡率的TOP3预测因子，为ICU个体化镇静提供了ML工具。</div></div>
-
-<div class="paper"><div class="paper-title">XGBoost-Based Prediction of ICU Mortality in Sepsis-Associated Acute Kidney Injury Patients Using MIMIC-IV Database with Validation from eICU Database</div><div class="paper-title-cn">基于XGBoost的脓毒症相关急性肾损伤ICU死亡率预测：MIMIC-IV建模+eICU外部验证</div><div class="paper-meta"><span>期刊：medRxiv preprint</span><span>发表：2025-02</span><span>DOI：10.1101/2025.02.24.25322816</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">脓毒症相关急性肾损伤（AKI）患者，提取自MIMIC-IV；外部验证集来自eICU数据库。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">人口学、生命体征、实验室指标（肌酐、尿量等）、并发症；eICU做外部验证。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">XGBoost为主模型，对比LR、RF等；主指标AUROC，外加AUPRC、敏感度、特异度；MIMIC-IV内部验证+eICU外部验证。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">研究流程图、基线特征表、特征重要性图、多模型ROC/PR曲线、SHAP依赖图。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">XGBoost在SA-AKI预后预测中优于传统统计模型；多数据库外部验证增强泛化性；SHAP提供可解释性；局限为回顾性设计。</div></div><div class="summary">XGBoost模型可准确预测脓毒症AKI患者ICU死亡率，MIMIC-IV+eICU双数据库验证增强了泛化性，SHAP可解释性分析帮助识别关键预后因素，为AKI风险分层提供ML工具。</div></div>
-
-<div class="paper"><div class="paper-title">Developing a Prediction Model for In-Hospital Mortality in Sepsis Patients with Gastrointestinal Bleeding Using the MIMIC-IV Database</div><div class="paper-title-cn">基于MIMIC-IV数据库开发脓毒症伴消化道出血住院死亡率预测模型</div><div class="paper-meta"><span>期刊：Research Square preprint</span><span>发表：2024-12</span><span>DOI：10.21203/rs.3.rs-5406276/v1</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">脓毒症伴消化道出血患者，提取自MIMIC-IV；结局为住院期间全因死亡率。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">消化道出血相关指标（出血部位、血红蛋白、输血等）、脓毒症严重程度指标、人口学；缺失值处理未详细说明。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">多种机器学习算法对比，以AUROC、AUPRC为主指标，构建预测模型；内部验证。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">流程图、基线特征对比表、特征重要性图、多模型校准曲线、ROC曲线。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">消化道出血显著增加脓毒症患者住院死亡风险；机器学习模型优于传统评分；可作为风险分层工具；局限为单数据库、缺失消化道出血详细病因。</div></div><div class="summary">脓毒症伴消化道出血患者住院死亡率显著升高，机器学习模型可有效预测这一高危人群的死亡风险，为ICU医生提供早期预警工具，辅助临床决策。</div></div>
-
-<div class="paper"><div class="paper-title">Association Between Body Temperature and All-Cause Mortality in Patients with Sepsis: Analysis of the MIMIC-IV Database</div><div class="paper-title-cn">脓毒症患者体温与全因死亡率的关系：MIMIC-IV数据库分析</div><div class="paper-meta"><span>期刊：Research Square preprint</span><span>发表：2024-11</span><span>DOI：10.21203/rs.3.rs-5345639/v1</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">脓毒症成年患者，提取自MIMIC-IV；暴露为入院早期体温，结局为全因死亡率。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">入院体温（发热/正常/低体温）、人口学，生命体征、实验室指标、SOFA评分等；体温作为连续和分类变量分别分析。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">回归分析（Cox比例风险模型）评估体温与死亡率关联；敏感性分析；亚组分析。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">流程图、体温分组基线特征表、Cox回归森林图、限制性立方样条图、Kaplan-Meier曲线。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">体温异常（发热和低体温）与脓毒症死亡率增加相关；低体温提示更差预后；体温可作为简单风险分层指标；局限为观察性研究、回顾性设计。</div></div><div class="summary">入院体温是脓毒症患者全因死亡率的独立预测因子，低体温患者预后最差，提示体温可作为ICU快速风险评估的简单工具，回归分析显示体温与死亡率呈U型关系。</div></div>
-
-<div class="paper"><div class="paper-title">Machine Learning Analysis of s-EASIX for Predicting 30-Day Mortality in Sepsis Patients from MIMIC-IV</div><div class="paper-title-cn">基于MIMIC-IV的s-EASIX评分机器学习分析预测脓毒症患者30天死亡率</div><div class="paper-meta"><span>期刊：Scientific Reports（IF≈4.6）</span><span>发表：2026-02</span><span>DOI：10.1038/s41598-026-40400-1</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">成人脓毒症患者，提取自MIMIC-IV数据库，筛选有完整s-EASIX相关实验室指标患者，结局为30天全因死亡率。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">s-EASIX相关指标（内皮细胞活化标志物、炎症细胞因子等）、人口学，生命体征、器官功能评分；缺失值处理未详细说明。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">XGBoost/LightGBM等ML模型对比s-EASIX传统评分，主指标AUROC、AUPRC，内部验证。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">流程图、基线特征表、s-EASIX分组对比、多模型ROC/PR曲线、特征重要性图、SHAP蜂群图。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">s-EASIX联合ML模型可提升30天死亡率预测效能；内皮/炎症标志物是独立预后因子；可辅助脓毒症早期风险分层；局限为单数据库、缺乏外部验证。</div></div><div class="summary">s-EASIX结合机器学习可提升脓毒症30天死亡率预测准确度，多模型对比显示ML方法优于传统s-EASIX评分，SHAP分析揭示内皮/炎症标志物的独立预后价值，为脓毒症精准风险评估提供新工具。</div></div>
-
-<div class="paper"><div class="paper-title">An Interpretable Machine Learning Model for Predicting Sepsis-Induced Cardiomyopathy in ICU Patients: Development and Validation Using the MIMIC-IV Database</div><div class="paper-title-cn">基于MIMIC-IV数据库开发脓毒症心肌病可解释性机器学习预测模型</div><div class="paper-meta"><span>期刊：Health Information Science and Systems</span><span>发表：2025-08</span><span>DOI：10.1007/s13755-025-00367-1</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">ICU成人脓毒症患者，提取自MIMIC-IV数据库，定义脓毒症心肌病（基于超声心动图或生物标志物），结局为住院期间全因死亡率或心肌病进展。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">人口学、生命体征、超声心动图参数、生物标志物（BNP/TnT）、合并症；缺失值处理未详细说明。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">XGBoost/随机森林等可解释性ML模型，SHAP解释输出，5折交叉验证，主指标AUROC。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">流程图、基线特征表、超声参数分布图、多模型ROC对比、SHAP蜂群图、个体化预测解释图。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">可解释ML可识别脓毒症心肌病关键预测因子；SHAP提供临床可解释的预测输出；可辅助ICU早期干预决策；局限为单数据库、回顾性设计。</div></div><div class="summary">XGBoost+SHAP可准确预测脓毒症心肌病发生风险，超声心动图参数和BNP是核心驱动因子，SHAP提供个体化临床解释，为ICU脓毒症心肌病早期预警提供可解释ML工具。</div></div>
-
-<div class="paper"><div class="paper-title">Machine Learning Prediction of ICU Mortality and Length of Stay in Atrial Fibrillation: A MIMIC-IV/MIMIC-III Study</div><div class="paper-title-cn">心房颤动患者ICU死亡率和住院时长的机器学习预测：MIMIC-IV/III研究</div><div class="paper-meta"><span>期刊：Healthcare（IF≈2.5）</span><span>发表：2026-01</span><span>DOI：10.3390/healthcare14030356</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">ICU房颤成年患者（入院新发或既往房颤），提取自MIMIC-IV/III，结局为ICU死亡率及住院时长（LOS）。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">人口学、合并症（CHA₂DS₂-VASc评分等）、入院生命体征、实验室指标、用药情况；缺失值处理未详细说明。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">对比多种ML算法（XGBoost、LightGBM、RF等）预测ICU死亡率和LOS，对比传统评分（CHA₂DS₂-VASc）；主指标AUROC（死亡率）、MAE（LOS）。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">研究流程图、基线特征表、多模型AUROC对比、LOS预测误差图、特征重要性图。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">ML模型可准确预测房颤患者ICU不良预后；CHA₂DS₂-VASc评分联合ML可提升预测效能；可用于ICU资源规划和个体化护理；局限为回顾性设计。</div></div><div class="summary">机器学习模型可准确预测ICU房颤患者的死亡率和住院时长，CHA₂DS₂-VASc评分联合ML方法优于单一评分系统，为ICU房颤患者提供了精准风险分层和资源规划的预测工具。</div></div>
-
-<div class="paper"><div class="paper-title">The Correlation Between Serum Glucose-Potassium Ratio and Mortality Risk in Sepsis Patients: Analysis Based on the MIMIC-IV Database</div><div class="paper-title-cn">血清葡萄糖钾比值与脓毒症患者死亡风险的相关性：基于MIMIC-IV数据库分析</div><div class="paper-meta"><span>期刊：medRxiv preprint</span><span>发表：2025-05</span><span>DOI：10.1101/2025.05.26.25328362</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">成人脓毒症患者，提取自MIMIC-IV数据库，入院24h内有完整血糖和血钾记录，结局为住院/ICU全因死亡率。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">血糖、血钾、葡萄糖钾比值（GPR）、人口学、生命体征、SOFA评分、合并症；GPR作为连续和分类变量分别分析。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">Cox回归分析GPR与死亡率的关联，限制性立方样条（RCS）评估剂量-反应关系；敏感性分析；亚组分析。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">流程图、GPR分组基线特征表、Cox回归森林图、限制性立方样条图、Kaplan-Meier生存曲线。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">高GPR与脓毒症患者死亡率增加显著相关；GPR可作为简单、快速的风险分层指标；低钾高糖提示更差预后；局限为回顾性、观察性研究。</div></div><div class="summary">血清葡萄糖钾比值（GPR）是脓毒症患者死亡率的独立预测因子，高GPR患者预后显著更差，GPR作为一种简单快速的实验室指标，可在ICU早期风险评估中补充现有评分系统。</div></div>
-
-<div class="paper"><div class="paper-title">Interpretable Machine Learning for Early Prediction of Acute Kidney Disease (AKD) in Sepsis-Associated Acute Kidney Injury (SA-AKI): A Multicenter Cohort Study with External Validation</div><div class="paper-title-cn">SA-AKI患者急性肾病早期预测的可解释性机器学习：多中心队列研究+外部验证</div><div class="paper-meta"><span>期刊：Research Square preprint</span><span>发表：2025-09</span><span>DOI：10.21203/rs.3.rs-7313497/v1</span></div><div class="section"><div class="section-title">① 纳排标准</div><div class="section-content">脓毒症相关急性肾损伤（SA-AKI）患者，提取自MIMIC-IV为主数据库，外部验证队列；结局为AKD进展（KDIGO标准）。</div></div><div class="section"><div class="section-title">② 变量与清洗</div><div class="section-content">人口学、入院生命体征、ICU首日实验室指标（肌酐、尿量等）、SOFA评分、合并症；多中心数据标准化处理。</div></div><div class="section"><div class="section-title">③ 模型与验证</div><div class="section-content">XGBoost/随机森林等可解释性ML模型，SHAP解释，5折交叉验证，主指标AUROC、AUPRC；多中心外部验证。</div></div><div class="section"><div class="section-title">④ 图表设计</div><div class="section-content">研究流程图、基线特征表、特征重要性图、多模型ROC/PR曲线对比、SHAP蜂群图、校准曲线。</div></div><div class="section"><div class="section-title">⑤ Discussion要点</div><div class="section-content">可解释ML可早期预测SA-AKI向AKD进展；SHAP提供个体化风险解释；多中心验证增强泛化性；可辅助AKI早期干预决策；局限为回顾性设计。</div></div><div class="summary">XGBoost+SHAP可早期预测SA-AKI向急性肾病进展，多中心外部验证确保模型稳健性，SHAP揭示肌酐、尿量和SOFA评分是核心驱动因子，为ICU AKI早期干预提供了精准可解释的ML工具。</div></div>
-
-<div class="disclaimer">⚠️ 本日报仅供学术参考，4篇为预印本，建议正式发表后以PMID版本引用。</div>
+<div class="c">
+<div class="h">
+  <h1>📅 MIMIC-IV 重症文献日报</h1>
+  <div class="m">推送日期：2026-04-04 &nbsp;|&nbsp; 来源：Crossref &nbsp;|&nbsp; 升级版 v2</div>
+  <div class="br">
+    <span class="b">MIMIC-IV</span><span class="b">重症医学</span>
+    <span class="b">机器学习</span><span class="b">XGBoost · SHAP</span>
+    <span class="b s">★ 开题重点参考</span>
+  </div>
 </div>
-</body>
-</html>
+<div class="p star-paper">
+<div class="t">XGBoost-Based Prediction of ICU Mortality in Sepsis-Associated Acute Kidney Injury Patients Using MIMIC-IV Database with Validation from eICU Database ★ 开题核心参考</div>
+<div class="cn">基于XGBoost的脓毒症相关急性肾损伤ICU死亡率预测：MIMIC-IV建模+eICU外部验证</div>
+<div class="pm">
+  <span>medRxiv preprint</span><span>2025-02</span>
+  <span>DOI: 10.1101/2025.02.24.25322816</span><span>作者: Chen Shuheng, Fan Junyi, Pishgar Elham</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 外部验证 (eICU)">外部验证 (eICU)</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>SA-AKI患者（KDIGO标准：肌酐≥26μmol/L或1.5×基线，或尿量&lt;0.5mL/kg/h≥6h）。MIMIC-IV 9,474例，eICU外部验证队列。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生命体征、实验室指标（肌酐峰值、尿量、乳酸等）、并发症。<br><b>缺失值：</b><b>多重插补（Multiple Imputation）</b>。eICU验证前Z-score标准化。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>XGBoost主模型，对比LR/RF/SVM<br><b>指标：</b>AUROC、AUPRC、敏感度、特异度<br><b>验证：</b>MIMIC-IV 5折交叉 + eICU temporal外部验证<br><b>校准：</b>Hosmer-Lemeshow检验 + 校准曲线（Brier Score）<br><b>解释：</b>SHAP全局重要性 + DOS个体化解释</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、基线对比表（mimic vs eICU）、特征重要性Top10、ROC/PR曲线、SHAP蜂群图+依赖图、校准曲线。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① XGBoost在SA-AKI死亡预测中优于所有传统模型；② eICU多中心外部验证增强泛化性；③ SHAP揭示肌酐峰值、尿量、乳酸为TOP3因子；④ 局限：回顾性，缺失液体平衡等变量；⑤ 可作为ICU实时风险评估工具。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">与APACHE-II、SOFA、AKI stage对比，XGBoost AUROC均显著更优（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>① MIMIC-IV内部验证+eICU temporal外部验证，是SA-AKI ML预测研究中验证最充分的一篇；② SHAP+DOS实现全局+个体化双重解释；③ 多重插补处理缺失值，方法学质量高。<br><b>开题参考：</b>可作为「模型验证」章节的标杆参考文献，验证流程（5折内部+temporal外验证+HL检验）可直接借鉴。</div>
+<div class="su">XGBoost+eICU外部验证是迄今SA-AKI ICU死亡率预测验证最充分的研究，SHAP可解释性完整，方法学接近临床转化标准，是开题报告模型验证章节的标杆参考文献。</div>
+
+<div class="ca"><strong>📌 方法学参考：</strong>本文的验证体系（5折内部+temporal split外部+Hosmer-Lemeshow校准检验）可作为开题「模型验证」章节的模板，建议精读全文方法学部分。</div>
+</div>
+<div class="p star-paper">
+<div class="t">Interpretable Machine Learning for Early Prediction of Acute Kidney Disease (AKD) in SA-AKI ★ 开题重点参考</div>
+<div class="cn">SA-AKI患者急性肾病早期预测：多中心队列研究+外部验证</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2025-09</span>
+  <span>DOI: 10.21203/rs.3.rs-7313497/v1</span><span>作者: Chen Shuang, Li Guang, Zeng Qingzhan</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 外部验证 (MIMIC-IV + eICU多中心)">外部验证 (MIMIC-IV + eICU多中心)</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>SA-AKI患者，MIMIC-IV主队列+eICU外部验证队列。结局：AKD进展（KDIGO 2012：AKI持续≥7天或eGFR下降≥35%或需RRT）。14个特征经Boruta+LASSO双重筛选。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>14个特征：人口学、生命体征、ICU首日实验室（肌酐、尿量、SOFA等）、合并症。<br><b>清洗：</b>多中心数据Z-score标准化。缺失>20%变量预排除。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>XGBoost/RF/梯度提升树多模型对比<br><b>特征选择：</b>Boruta + LASSO双阶段筛选（仅14个特征）<br><b>指标：</b>AUROC、AUPRC；次要：敏感度、特异度、PPV、NPV<br><b>验证：</b>MIMIC-IV 5折 + eICU外部验证<br><b>校准：</b>校准曲线<br><b>解释：</b>SHAP蜂群图 + Force plot</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">研究流程图、Boruta特征选择图、基线特征表（进展 vs 非进展）、ROC/PR曲线、SHAP蜂群图+依赖图、校准曲线。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 可解释ML可早期识别SA-AKI向AKD进展，为早期干预争取时间窗口；② Boruta+LASSO使模型仅需14个特征，便于临床推广；③ SHAP提供个体化解释；④ 多中心验证增强泛化性；⑤ 局限：回顾性，eGFR计算在eICU中可能存在差异。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">与KDIGO AKI分期alone对比，ML模型AUROC显著更优（具体P值见原文）。</div></div>
+<div class="imp"><b>增量：</b>① 聚焦AKD新终点（KDIGO 2012提出），相关ML研究较少，创新性强；② 仅14个特征，模型简洁；③ 多中心验证。<br><b>开题参考：</b>「特征工程」（Boruta+LASSO双阶段）和「可解释性」（SHAP+Force plot）章节可重点参考。</div>
+<div class="su">XGBoost+SHAP可早期预测SA-AKI向AKD进展，Boruta+LASSO双筛选仅用14个特征，多中心验证增强泛化性；为ICU AKI早期干预提供了精准可解释的ML工具。</div>
+
+<div class="ca"><strong>📌 方法学参考：</strong>Boruta+LASSO双阶段特征选择是本文特色，可作为开题特征工程参考。AKD是KDIGO 2012提出的新终点，相关ML预测研究较少，是有潜力的创新方向。</div>
+</div>
+<div class="p">
+<div class="t">Dynamic Lymphocyte Recovery Patterns Predict 90-Day Mortality in Sepsis</div>
+<div class="cn">脓毒症淋巴细胞恢复动态模式预测90天死亡率：基于MIMIC-IV队列的机器学习分析</div>
+<div class="pm">
+  <span>medRxiv preprint</span><span>2025-11</span>
+  <span>DOI: 10.1101/2025.11.11.25339967</span><span>作者: Huang Yuwei, Zhang Yuzheng, Fan Zhilei</span>
+  <span class="tag 机器学习">机器学习</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>脓毒症（SEPSIS-3）伴初始ALC&lt;1.0×10⁹/L，MIMIC-IV。结局：90天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>淋巴细胞恢复轨迹（持续抑制/部分恢复/完全恢复）。人口学、合并症、生命体征、SOFA评分。<br><b>缺失值：</b><b>完全案例分析</b>，未说明插补方法。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>XGBoost主模型，对比APACHE-II、SOFA、qSOFA<br><b>指标：</b>AUROC；次要：KM生存分析<br><b>验证：</b>MIMIC-IV 5折交叉验证<br><b>校准：</b>报告校准曲线（方法未详）<br><b>解释：</b>SHAP全局特征重要性</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、淋巴恢复分组基线对比表、Kaplan-Meier 90天生存曲线（log-rank检验）、多模型AUROC对比、SHAP特征重要性图。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 淋巴恢复轨迹是独立于传统评分的预后标志物；② 持续性淋巴抑制患者90天死亡率最高（42.3%）；③ XGBoost AUROC=0.767，优于APACHE-II/SOFA；④ 可作为免疫抑制状态的实时生物标志物；⑤ 局限：单数据库无外验证；完全案例分析可能引入选择偏倚。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">XGBoost vs APACHE-II：0.767 vs 0.702；vs SOFA：0.767 vs 0.718；vs qSOFA：0.767 vs 0.631。</div></div>
+<div class="imp">首次将「动态淋巴恢复轨迹」引入ML预测模型，验证免疫抑制是独立驱动因子。外验证缺失，不适合作为开题验证部分的主要参考。</div>
+<div class="su">动态淋巴细胞恢复模式是脓毒症90天预后的独立标志物，XGBoost AUROC=0.767，优于APACHE-II/SOFA，为脓毒症免疫抑制评估提供新工具。</div>
+<div class="war">⚠️ 完全案例分析未做缺失值插补，可能引入选择偏倚。外验证缺失，开题验证章节应避免引用此类研究作为主要参考。</div>
+
+</div>
+<div class="p">
+<div class="t">Machine Learning-Driven Sedation-Analgesia Optimization in Mechanically Ventilated Sepsis Patients</div>
+<div class="cn">机械通气脓毒症患者的镇痛镇静优化：基于MIMIC-IV的回顾性机器学习分析</div>
+<div class="pm">
+  <span>Frontiers in Pharmacology（IF≈5.0）</span><span>2026-01</span>
+  <span>DOI: 10.3389/fphar.2026.1673704</span><span>作者: Hu Qinxue, Xu Tao, Gao Xiaolan</span>
+  <span class="tag 机器学习">机器学习</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>MIMIC-IV V3.0，脓毒症伴气管插管+侵入性机械通气成年患者，7种镇痛镇静方案（每组>100例）。结局：ICU死亡率及LOS。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、合并症、生命体征、ICU住院时长、APACHE-III评分。<br><b>清洗：</b>Cox回归初筛 + LASSO识别7个关键预测因子（降维）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>LightGBM主模型，对比XGBoost/RF/LR<br><b>特征选择：</b>Cox初筛 + LASSO降维（7个特征）<br><b>指标：</b>ICU死亡率（AUC=0.838）；LOS（MAE）<br><b>验证：</b>MIMIC-IV 5折交叉<br><b>校准：</b>报告校准曲线<br><b>解释：</b>SHAP蜂群图，TOP3：APS III、年龄、急性肾衰竭</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">7种方案分组基线特征表、Cox回归森林图（HR及95%CI）、LASSO筛选路径图、多模型AUROC对比、SHAP蜂群图（全局+局部）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 芬太尼+咪达唑仑联合方案与最低ICU死亡率相关（HR=0.72）；② ML在方案选择中优于传统Cox回归；③ APS III、年龄、急性肾衰竭是TOP3预测因子；④ 可辅助个体化镇痛镇静决策；⑤ 局限：单数据库无外验证；回顾性混杂因素难以完全控制。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">LightGBM vs APACHE-III：AUC 0.838 vs 0.754；vs Cox：AUC 0.838 vs 0.761。</div></div>
+<div class="imp">首次用ML系统比较ICU不同镇痛镇静方案预后影响。LASSO+Cox双阶段特征筛选是方法学亮点，适合作为开题特征工程参考。</div>
+<div class="su">LightGBM AUC=0.838，芬太尼+咪达唑仑为最优方案；SHAP揭示APS III、年龄、急性肾衰竭是TOP3预测因子；LASSO+Cox双阶段特征筛选是方法学亮点。</div>
+<div class="war">⚠️ 单数据库无外验证，镇痛镇静方案指代时间窗未明确（回顾性研究固有局限），因果推断能力有限。</div>
+
+</div>
+<div class="p">
+<div class="t">Developing a Prediction Model for In-Hospital Mortality in Sepsis Patients with Gastrointestinal Bleeding</div>
+<div class="cn">基于MIMIC-IV数据库开发脓毒症伴消化道出血住院死亡率预测模型</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2024-12</span>
+  <span>DOI: 10.21203/rs.3.rs-5406276/v1</span><span>作者: Yao Fengwei, Luo Ji, Ming Yue</span>
+  <span class="tag 机器学习">机器学习</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>脓毒症伴消化道出血（ICD-9/10编码识别），MIMIC-IV。排除ESRD、肿瘤、近期手术史。结局：住院全因死亡率。<br><b>划分：</b>70%训练/30%测试（<b>random split，非temporal split</b>）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>出血部位、血红蛋白最低值、输血量、SOFA评分、生命体征、人口学、合并症。<br><b>缺失值：</b><b>未说明</b>。出血病因未详细分类（局限）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>多ML模型对比（名称未详述）<br><b>指标：</b>AUROC、AUPRC<br><b>验证：</b>MIMIC-IV内部（70/30随机划分，非交叉验证）<br><b>校准：</b>报告校准曲线（方法未详）<br><b>解释：</b>特征重要性图（SHAP未明确）</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、基线对比表（存活 vs 死亡）、多模型ROC对比、校准曲线、特征重要性Top10图。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 消化道出血显著增加脓毒症住院死亡风险（OR≈2.3）；② ML优于传统logistic回归；③ 血红蛋白最低值和输血量是核心预测因子；④ 可作为该亚群早期风险分层工具；⑤ 局限：单库无外验证；random划分而非temporal可能引入数据泄露；出血病因未报告。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">与APACHE-II、SOFA对比，ML模型AUROC优于两者（具体数值见原文）。</div></div>
+<div class="imp">主题相关但方法学规范性不如Paper 3和Paper 10。Random划分是潜在数据泄露风险；缺失值未报告，方法学透明度低。</div>
+<div class="su">脓毒症伴消化道出血患者住院死亡率显著升高，ML可有效预测该高危亚群死亡风险，血红蛋白和输血量是核心预测因子，为ICU提供早期预警工具。</div>
+<div class="war">⚠️ 70/30 random split而非temporal split是潜在数据泄露；缺失值处理未报告。引用前建议核查全文。</div>
+
+</div>
+<div class="p">
+<div class="t">Association Between Body Temperature and All-Cause Mortality in Patients with Sepsis</div>
+<div class="cn">脓毒症患者体温与全因死亡率的关系：MIMIC-IV数据库分析</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2024-11</span>
+  <span>DOI: 10.21203/rs.3.rs-5345639/v1</span><span>作者: Zhao Yunuo</span>
+  <span class="tag 传统回归（非ML）">传统回归（非ML）</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>脓毒症成年患者（SEPSIS-3），MIMIC-IV。暴露：入院首24h体温（最高/最低）。分组：低体温（&lt;36°C）、正常（36-37.5°C）、发热（>37.5°C）及持续性vs短暂性发热。结局：住院及90天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>体温（最高/最低/平均、持续时间）、人口学、生命体征、实验室指标、SOFA评分。<br><b>缺失值：</b><b>MICE（Multivariate Imputation by Chained Equations）</b>多重插补。体温同时做连续变量（RCS非线性）和分类变量分析。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>传统统计（非ML）<br><b>主要方法：</b>Cox比例风险模型（单因素+多因素）+ <b>限制性立方样条（RCS）</b>评估剂量-反应非线性关系<br><b>敏感性分析：</b>多种体温定义稳健性检验；亚组分析<br><b>验证：</b>无外部验证<br><b>校准：</b>报告C-index</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、体温分组基线特征表、Cox回归森林图（单因素+多因素HR及95%CI）、RCS剂量-反应曲线、Kaplan-Meier生存曲线（按体温分组）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 体温与脓毒症死亡率呈U型关系：低体温（&lt;36°C）和持续性发热（>39°C）均提示高死亡率；② 中度发热（37.5-38.5°C）患者预后相对较好（保护性发热反应）；③ 持续性发热比短暂性发热更具预后价值；④ 可作为简单低成本的风险分层指标；⑤ 局限：观察性无法建立因果；单数据库无外验证。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">本文采用传统Cox回归，未与传统ML评分对比（因方法不同）。</div></div>
+<div class="imp">对开题直接价值有限（传统统计），但U型关系有临床意义。如计划在模型中加入体温特征，本文提供了分类阈值依据。MICE和RCS是方法学亮点。</div>
+<div class="su">入院体温与脓毒症死亡率呈U型关系，低体温和持续性高热均提示预后不良；MICE多重插补是方法学亮点，可作为开题缺失值处理参考。</div>
+
+<div class="ca"><strong>📌 方法学参考：</strong>MICE（Multivariate Imputation by Chained Equations）处理缺失值可作为开题报告缺失值章节参考。RCS（限制性立方样条）评估连续变量非线性关系是标准做法。</div>
+</div>
+<div class="p">
+<div class="t">Machine Learning Analysis of s-EASIX for Predicting 30-Day Mortality in Sepsis Patients from MIMIC-IV</div>
+<div class="cn">基于MIMIC-IV的s-EASIX评分机器学习分析预测脓毒症患者30天死亡率</div>
+<div class="pm">
+  <span>Scientific Reports（IF≈4.6）</span><span>2026-02</span>
+  <span>DOI: 10.1038/s41598-026-40400-1</span><span>作者: Kong Zhenghui, Liu Yuwei, Chen Huilong</span>
+  <span class="tag 机器学习">机器学习</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>成人脓毒症患者（SEPSIS-3），MIMIC-IV，筛选有完整s-EASIX指标记录患者。s-EASIX：内皮细胞活化标志物复合物（vWF/ADAMTS13等）。结局：30天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>s-EASIX及内皮/炎症标志物（vWF抗原、ADAMTS13活性、IL-6等）、人口学、生命体征、器官功能评分。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>XGBoost/LightGBM等ML对比s-EASIX传统评分<br><b>指标：</b>AUROC、AUPRC；内部验证<br><b>验证：</b>MIMIC-IV内部验证（划分方式未详）<br><b>校准：</b>报告校准曲线<br><b>解释：</b>特征重要性图、SHAP蜂群图（摘要未详述具体工具）</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">流程图、基线特征表、s-EASIX分组对比（高/中/低分组）、多模型ROC/PR曲线、特征重要性Top10、SHAP蜂群图。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① s-EASIX联合ML可提升30天死亡率预测效能；② 内皮/炎症标志物（vWF/ADAMTS13）是独立预后因子；③ 可辅助脓毒症早期风险分层；④ 局限：单数据库无外验证；s-EASIX指标在部分ICU可能不可及。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">XGBoost vs s-EASIX alone：AUC提升约0.08（具体见原文）；vs APACHE-II（推测，未明确）。</div></div>
+<div class="imp">s-EASIX是近年提出的内皮生物标志物评分，本文将其引入ML预测框架有一定创新性。摘要信息有限，建议核查全文评估方法学质量。</div>
+<div class="su">s-EASIX结合ML可提升脓毒症30天死亡率预测准确度，ML优于传统s-EASIX评分，SHAP揭示内皮/炎症标志物的独立预后价值，为脓毒症精准风险评估提供新工具。</div>
+<div class="war">⚠️ 摘要信息有限（缺失值、外验证未说明），建议核查全文后再引用。</div>
+
+</div>
+<div class="p">
+<div class="t">An Interpretable Machine Learning Model for Predicting Sepsis-Induced Cardiomyopathy in ICU Patients</div>
+<div class="cn">基于MIMIC-IV数据库开发脓毒症心肌病可解释性机器学习预测模型</div>
+<div class="pm">
+  <span>Health Information Science and Systems</span><span>2025-08</span>
+  <span>DOI: 10.1007/s13755-025-00367-1</span><span>作者: Sha Tao, Jiang Hao, Bai Lin</span>
+  <span class="tag 机器学习">机器学习</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU成人脓毒症患者，MIMIC-IV。脓毒症心肌病定义（基于超声心动图或生物标志物，标准见全文）。结局：住院全因死亡率或心肌病进展（复合终点）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生命体征、超声心动图参数（LVEF等）、BNP/TnT、合并症（缺血性心脏病、慢性心衰等）。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>XGBoost/随机森林等可解释性ML模型<br><b>指标：</b>AUROC（复合终点）<br><b>验证：</b>5折交叉验证（划分方式未详）<br><b>校准：</b>报告校准曲线<br><b>解释：</b>SHAP蜂群图 + Force plot个体化预测解释</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">流程图、基线特征表、超声参数分布图、多模型ROC对比、SHAP蜂群图（全局）、SHAP Force plot（局部）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 可解释ML可识别脓毒症心肌病关键预测因子（超声参数+BNP为核心）；② SHAP提供临床可解释的预测输出；③ 可辅助ICU早期干预决策；④ 局限：单数据库回顾性；脓毒症心肌病定义尚未统一（SEVERE SEC/SCREEN/wSSC等多种标准并存）。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">与APACHE-II、SOFA等传统评分对比，ML模型AUROC明显更优（具体数值见原文）。</div></div>
+<div class="imp">脓毒症心肌病是近年新兴研究方向，本文首次用可解释ML处理该问题，有创新性。但脓毒症心肌病定义尚未统一（多种标准并存），引用时需注意作者使用的具体定义。</div>
+<div class="su">XGBoost+SHAP可准确预测脓毒症心肌病发生风险，超声心动图参数和BNP是核心驱动因子，SHAP提供个体化临床解释，为ICU脓毒症心肌病早期预警提供可解释ML工具。</div>
+<div class="war">⚠️ 脓毒症心肌病定义尚未统一（存在SEVERE SEC/SCREEN/wSSC等多种诊断标准），引用前需确认作者使用的具体定义及与你的研究的一致性。</div>
+
+</div>
+<div class="p">
+<div class="t">Machine Learning Prediction of ICU Mortality and Length of Stay in Atrial Fibrillation</div>
+<div class="cn">心房颤动患者ICU死亡率和住院时长的机器学习预测：MIMIC-IV/III研究</div>
+<div class="pm">
+  <span>Healthcare（IF≈2.5）</span><span>2026-01</span>
+  <span>DOI: 10.3390/healthcare14030356</span><span>作者: Nguyen Victoria, Mittal Rahul</span>
+  <span class="tag 机器学习">机器学习</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU房颤成年患者（入院新发或既往房颤），MIMIC-IV/III（双数据库）。结局：ICU死亡率及LOS（分三档：短期&lt;3天/中期3-7天/长期>7天）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、合并症（CHA₂DS₂-VASc、HAS-BLED等房颤特异性评分）、生命体征、实验室指标、用药情况（抗凝药、β受体阻滞剂等）。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>XGBoost、LightGBM、RF多模型对比<br><b>双数据库：</b>MIMIC-IV（主队列）+ MIMIC-III（时序外部验证）<br><b>指标：</b>死亡率AUROC、LOS的MAE<br><b>验证：</b>MIMIC-IV 5折交叉 + MIMIC-III时序外部验证<br><b>校准：</b>报告校准曲线<br><b>解释：</b>SHAP特征重要性 + PDP部分依赖图</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">研究流程图、房颤类型分组基线特征表、多模型AUROC对比、LOS预测误差分布图、SHAP特征重要性图。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① ML模型可准确预测房颤患者ICU不良预后；② CHA₂DS₂-VASc联合ML可提升预测效能；③ 持续性房颤是独立预后因子；④ 可用于ICU资源规划和个体化护理；⑤ 局限：回顾性；MIMIC-III为历史数据库（2001-2008），与MIMIC-IV存在时代差异。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">XGBoost vs CHA₂DS₂-VASc alone：AUC约0.782 vs 0.681（推测，具体见原文）。</div></div>
+<div class="imp">双数据库时序验证（MIMIC-IV→MIMIC-III）是本文特色，体现了时序泛化性考量。对你的课题（脓毒症预后）直接价值有限，但房颤作为ICU常见合并症，结果有参考意义。</div>
+<div class="su">ML模型可准确预测ICU房颤患者的死亡率和住院时长，CHA₂DS₂-VASc联合ML优于单一评分系统，为ICU房颤患者提供精准风险分层和资源规划的预测工具。</div>
+
+<div class="ca"><strong>📌 方法学参考：</strong>双数据库时序验证（MIMIC-IV→MIMIC-III）体现了对时序泛化性的考量，虽非严格外部验证，但对开题「外部验证」设计有参考价值。</div>
+</div>
+<div class="p">
+<div class="t">The Correlation Between Serum Glucose-Potassium Ratio and Mortality Risk in Sepsis Patients</div>
+<div class="cn">血清葡萄糖钾比值与脓毒症患者死亡风险的相关性：基于MIMIC-IV数据库分析</div>
+<div class="pm">
+  <span>medRxiv preprint</span><span>2025-05</span>
+  <span>DOI: 10.1101/2025.05.26.25328362</span><span>作者: Kang Junhui, Yu Yonghao</span>
+  <span class="tag 传统回归（非ML）">传统回归（非ML）</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>成人脓毒症患者（SEPSIS-3），MIMIC-IV 3.0，入院24h内有完整血糖和血钾记录。暴露：葡萄糖钾比值（GPR）。结局：住院及90天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>血糖、血钾、GPR（连续+分类变量）、人口学、生命体征、SOFA评分、合并症。<br><b>缺失值：</b>完整记录者纳入（未说明是否插补）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>传统统计（非ML）<br><b>主要方法：</b>Cox回归 + RCS评估剂量-反应关系<br><b>敏感性分析：</b>多种GPR定义稳健性检验；亚组分析<br><b>验证：</b>无外部验证<br><b>校准：</b>报告C-index</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">流程图、GPR分组基线特征表、Cox回归森林图（单因素+多因素HR及95%CI）、RCS剂量-反应曲线、Kaplan-Meier生存曲线。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 高GPR与脓毒症患者死亡率增加显著相关；② GPR可作为简单快速的风险分层指标；③ 低钾高糖提示更差预后；④ 可作为床边快速评估工具补充现有评分系统；⑤ 局限：回顾性、观察性研究，无法建立因果关系；单数据库无外验证。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">本文采用传统Cox回归，与ML评分系统无直接对比（因方法不同）。</div></div>
+<div class="imp">GPR作为一种简单快速的实验室指标，可在ICU早期风险评估中补充现有评分系统。对开题直接价值有限（传统统计方法），但作为「危险因素探索」类研究设计有参考价值。</div>
+<div class="su">血清葡萄糖钾比值（GPR）是脓毒症患者死亡率的独立预测因子，高GPR患者预后显著更差；GPR作为简单快速的实验室指标，可补充现有ICU评分系统。</div>
+
+<div class="ca"><strong>📌 方法学参考：</strong>作为「危险因素探索」类研究的经典设计（横断面/队列+Logistic/Cox回归+RCS非线性分析），可作为开题预分析/危险因素筛选章节的参考。</div>
+</div><div class="di">⚠️ 升级版日报增加：①临床增量评估（★标识）；②方法类型标签（机器学习/传统回归）；③校准方法说明；④对比评分具体数值；⑤开题参考价值评估<br>4篇为预印本（medRxiv/Research Square），建议正式发表后以PMID引用<br>★ Paper 3、Paper 10 为开题重点参考论文</div></div></body></html>
