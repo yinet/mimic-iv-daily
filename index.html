@@ -2,62 +2,57 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>MIMIC-IV 重症文献日报</title>
 <style>
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #0d1117; color: #e6edf3; line-height: 1.7; padding: 2rem; }
-  .container { max-width: 680px; margin: 0 auto; }
-  h1 { text-align: center; font-size: 2rem; color: #58a6ff; margin-bottom: 0.4rem; }
-  .subtitle { text-align: center; color: #8b949e; font-size: 0.85rem; margin-bottom: 2.5rem; }
-  .subtitle span { background: #21262d; padding: 2px 10px; border-radius: 4px; margin: 0 4px; }
-  .section-title { color: #8b949e; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin: 2rem 0 0.8rem 0; padding-left: 0.5rem; border-left: 3px solid #30363d; }
-  .paper-link { display: flex; align-items: center; justify-content: space-between; background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 1rem 1.2rem; margin-bottom: 0.7rem; text-decoration: none; transition: border-color 0.2s, background 0.2s; }
-  .paper-link:hover { border-color: #58a6ff; background: #1c2128; }
-  .paper-link-left { flex: 1; }
-  .paper-date { font-size: 0.8rem; color: #8b949e; margin-bottom: 0.2rem; }
-  .paper-label { font-size: 1rem; color: #79c0ff; font-weight: 600; }
-  .paper-count { font-size: 0.75rem; color: #3fb950; background: #1c2128; padding: 3px 10px; border-radius: 20px; border: 1px solid #30363d; white-space: nowrap; }
-  .paper-link:hover .paper-count { border-color: #3fb950; }
-  .footer { text-align: center; color: #484f58; font-size: 0.75rem; margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid #21262d; }
-  .footer a { color: #58a6ff; text-decoration: none; }
-  .status { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; color: #3fb950; background: #1c2128; padding: 4px 12px; border-radius: 20px; border: 1px solid #30363d; margin-bottom: 1.5rem; }
-  .status::before { content: ''; width: 7px; height: 7px; background: #3fb950; border-radius: 50%; animation: pulse 2s infinite; }
-  @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.4; } }
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.7;padding:2rem}
+.c{max-width:680px;margin:0 auto}
+h1{text-align:center;font-size:2rem;color:#58a6ff;margin-bottom:0.4rem}
+.sub{text-align:center;color:#8b949e;font-size:0.85rem;margin-bottom:2.5rem}
+.sub span{background:#21262d;padding:2px 10px;border-radius:4px;margin:0 4px}
+.st{display:inline-flex;align-items:center;gap:6px;font-size:0.75rem;color:#3fb950;background:#1c2128;padding:4px 12px;border-radius:20px;border:1px solid #30363d;margin-bottom:1.5rem}
+.st::before{content:'';width:7px;height:7px;background:#3fb950;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.st2{color:#8b949e;font-size:0.75rem;text-transform:uppercase;letter-spacing:1px;margin:2rem 0 0.8rem 0;padding-left:0.5rem;border-left:3px solid #30363d}
+.pl{display:flex;align-items:center;justify-content:space-between;background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem 1.2rem;margin-bottom:0.7rem;text-decoration:none;transition:border-color 0.2s,background 0.2s}
+.pl:hover{border-color:#58a6ff;background:#1c2128}
+.pll{flex:1}
+.pld{font-size:0.8rem;color:#8b949e;margin-bottom:0.2rem}
+.pllbl{font-size:1rem;color:#79c0ff;font-weight:600}
+.plc{font-size:0.75rem;color:#3fb950;background:#1c2128;padding:3px 10px;border-radius:20px;border:1px solid #30363d;white-space:nowrap}
+.pl:hover .plc{border-color:#3fb950}
+.foot{text-align:center;color:#484f58;font-size:0.75rem;margin-top:3rem;padding-top:1.5rem;border-top:1px solid #21262d}
+.foot a{color:#58a6ff;text-decoration:none}
+.new{background:#3fb95022;color:#3fb950;font-size:0.65rem;padding:1px 6px;border-radius:3px;margin-left:6px;vertical-align:middle}
 </style>
 </head>
 <body>
-<div class="container">
-  <h1>📅 MIMIC-IV 重症文献日报</h1>
-  <div class="subtitle">
-    <span>MIMIC-IV</span><span>重症医学</span><span>机器学习</span>
+<div class="c">
+<h1>📅 MIMIC-IV 重症文献日报</h1>
+<div class="sub"><span>MIMIC-IV</span><span>重症医学</span><span>机器学习</span></div>
+<div style="text-align:center"><div class="st">自动每日更新 · 早上 8 点推送</div></div>
+
+<div class="st2">日报归档</div>
+
+<a class="pl" href="2026-04-04-daily-papers.html" target="_blank">
+  <div class="pll">
+    <div class="pld">2026 年 4 月 4 日 · 周六</div>
+    <div class="pllbl">第 2 期日报 <span class="new">NEW</span></div>
   </div>
-  <div style="text-align:center">
-    <div class="status">自动每日更新 · 早上 8 点推送</div>
+  <div class="plc">10 篇 · 升级版</div>
+</a>
+
+<a class="pl" href="2026-04-03-daily-papers.html" target="_blank">
+  <div class="pll">
+    <div class="pld">2026 年 4 月 3 日 · 周五</div>
+    <div class="pllbl">第 1 期日报</div>
   </div>
+  <div class="plc">5 篇</div>
+</a>
 
-  <div class="section-title">日报归档</div>
-
-  <a class="paper-link" href="2026-04-04-daily-papers.html" target="_blank">
-    <div class="paper-link-left">
-      <div class="paper-date">2026 年 4 月 4 日 · 周六</div>
-      <div class="paper-label">第 2 期日报</div>
-    </div>
-    <div class="paper-count">10 篇</div>
-  </a>
-
-  <a class="paper-link" href="2026-04-03-daily-papers.html" target="_blank">
-    <div class="paper-link-left">
-      <div class="paper-date">2026 年 4 月 3 日 · 周五</div>
-      <div class="paper-label">第 1 期日报</div>
-    </div>
-    <div class="paper-count">5 篇</div>
-  </a>
-
-  <div class="footer">
-    MIMIC-IV 重症文献日报 · 由 OpenClaw 驱动<br>
-    <a href="https://github.com/yinet/mimic-iv-daily" target="_blank">GitHub 仓库</a>
-  </div>
+<div class="foot">MIMIC-IV 重症文献日报 · 由 OpenClaw 驱动<br>
+<a href="https://github.com/yinet/mimic-iv-daily" target="_blank">GitHub 仓库</a></div>
 </div>
 </body>
 </html>
