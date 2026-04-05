@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIMIC-IV 重症文献日报 2026-04-05</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.7;padding:1.5rem}
+.c{max-width:860px;margin:0 auto}
+.h{text-align:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #30363d}
+.h h1{color:#58a6ff;font-size:1.6rem;margin-bottom:0.3rem}
+.m{color:#8b949e;font-size:0.82rem}
+.br{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:0.5rem}
+.b{background:#21262d;color:#8b949e;font-size:0.72rem;padding:2px 8px;border-radius:4px}
+.s{background:#3fb95022;color:#3fb950;border:1px solid #3fb95055}
+.p{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:1.4rem;margin-bottom:1.4rem}
+.t{font-size:1rem;color:#79c0ff;font-weight:600;margin-bottom:0.25rem}
+.cn{color:#8b949e;font-size:0.85rem;margin-bottom:0.6rem}
+.pm{display:flex;flex-wrap:wrap;gap:6px;font-size:0.75rem;color:#8b949e;margin-bottom:0.8rem}
+.pm span{background:#21262d;padding:2px 8px;border-radius:4px}
+.tag{display:inline-block;font-size:0.7rem;padding:1px 7px;border-radius:3px;margin-left:4px}
+.tm{background:#388bfd33;color:#58a6ff;border:1px solid #388bfd55}
+.tr{background:#f0883e33;color:#f0883e;border:1px solid #f0883e55}
+.te{background:#3fb95033;color:#3fb950;border:1px solid #3fb95055}
+.se{margin-bottom:0.75rem}
+.st{font-size:0.8rem;font-weight:600;margin-bottom:0.25rem}
+.c1{color:#f0883e}.c2{color:#a371f7}.c3{color:#58a6ff}.c4{color:#79c0ff}.c5{color:#ff7b72}.ci{color:#3fb950}
+.sc{color:#c9d1d9;font-size:0.85rem;padding-left:1rem;border-left:2px solid #30363d}
+.imp{background:#0d281f;border-left:3px solid #3fb950;padding:0.7rem 1rem;border-radius:0 6px 6px 0;font-size:0.85rem;color:#c9d1d9;margin-top:0.8rem}
+.imp::before{content:"💡 临床增量 ";color:#3fb950;font-weight:600}
+.su{background:#1c2128;border-left:3px solid #3fb950;padding:0.7rem 1rem;border-radius:0 6px 6px 0;font-size:0.85rem;color:#c9d1d9}
+.su::before{content:"📝 "}
+.ca{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:0.8rem 1rem;font-size:0.8rem;color:#8b949e;margin-top:0.8rem}
+.ca strong{color:#f0883e}
+.war{background:#2d1f0f;border:1px solid #f0883e44;border-radius:6px;padding:0.7rem 1rem;font-size:0.78rem;color:#f0883e;margin-top:0.6rem}
+.link{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:0.7rem 1rem;font-size:0.8rem;margin-top:0.6rem}
+.link a{color:#58a6ff;word-break:break-all}
+.di{text-align:center;color:#484f58;font-size:0.75rem;margin-top:2rem;padding-top:1rem;border-top:1px solid #21262d}
+</style>
+</head>
+<body>
+<div class="c">
+<div class="h">
+  <h1>📅 MIMIC-IV 重症文献日报</h1>
+  <div class="m">推送日期：2026-04-05 &nbsp;|&nbsp; 来源：Crossref &nbsp;|&nbsp; 共 10 篇</div>
+  <div class="br">
+    <span class="b">MIMIC-IV</span><span class="b">重症医学</span>
+    <span class="b">机器学习</span><span class="b">脓毒症 · AKI</span>
+    <span class="b s">★ 含开题参考相关论文</span>
+  </div>
+</div>
+<div class="p">
+<div class="t">📄 第 1 篇 | Machine learning-based prediction model for 28-day mortality in acute kidney injury patients with liver cirrhosis: A MIMIC-IV database analysis</div>
+<div class="cn">基于MIMIC-IV数据库的肝硬化急性肾损伤患者28天死亡率机器学习预测模型</div>
+<div class="pm">
+  <span>PLOS One</span><span>2025-09</span>
+  <span>DOI: 10.1371/journal.pone.0328662</span><span>作者: Chai Luyu, Zhou Yuxiang, Zhou Nan</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag AKI+肝硬化">AKI+肝硬化</span><span class="tag MIMIC-IV">MIMIC-IV</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>肝硬化合并急性肾损伤（AKI）患者，4,168例（其中601例伴肝硬化），来自MIMIC-IV数据库。AKI定义：KDIGO标准。结局：28天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生命体征、实验室指标（肝肾功能、凝血功能等）、合并症。<br><b>预处理：</b>特征归一化（Normalization）；<b>特征选择：</b>递归特征消除（Recursive Feature Elimination, RFE）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>多ML模型对比（具体模型摘要未详）。<br><b>指标：</b>ROC曲线、校准曲线、P值。<br><b>验证：</b>MIMIC-IV内部划分（具体方式见全文）。<br><b>校准：</b>校准曲线（Calibration curve）。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">ROC曲线、校准曲线、特征重要性图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① AKI伴肝硬化患者28天死亡率显著高于单纯AKI患者；② ML模型可有效识别高危患者；③ 具体特征重要性见全文；④ 局限：单数据库回顾性；肝硬化病因分类未报告。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">与传统评分（如APACHE-II、SOFA）对比，ML模型表现更优（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>首个聚焦「AKI+肝硬化」亚群的ML预后研究，该亚群在ICU中病死率高但相关研究极少。</div>
+<div class="su">AI伴肝硬化患者28天死亡率显著更高，ML模型可有效识别高危亚群，为该类患者的早期风险分层提供工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1371/journal.pone.0328662" target="_blank">https://doi.org/10.1371/journal.pone.0328662</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 2 篇 | Stress hyperglycemia ratio and machine learning model for prediction of all-cause mortality in critically ill patients with acute kidney injury: A cohort study from MIMIC-IV</div>
+<div class="cn">应激性高血糖比值与机器学习模型预测急性肾损伤危重患者全因死亡率：MIMIC-IV队列研究</div>
+<div class="pm">
+  <span>DIGITAL HEALTH (SAGE)</span><span>2026-02</span>
+  <span>DOI: 10.1177/20552076261421140</span><span>作者: Huang Yingxiu, Ao Ting, Hu Ming</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 应激性高血糖比值">应激性高血糖比值</span><span class="tag AKI预后">AKI预后</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>AKI危重患者，提取自MIMIC-IV V3.1数据库。暴露：应激性高血糖比值（SHR = 入院血糖/ HbA1c推导平均血糖）。结局：28天全因死亡率（主要）、365天死亡率、ICU死亡率、住院死亡率（次要）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>SHR、人口学、生命体征、实验室指标（血糖、HbA1c、血肌酐等）、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习模型对比SHR传统评分。<br><b>指标：</b>28天及365天全因死亡率、ICU死亡率、住院死亡率。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>校准：</b>报告校准曲线。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">SHR分组基线特征表、多模型ROC对比、校准曲线、KM生存曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① SHR是AKI患者全因死亡的独立预测因子；② SHR联合ML可提升预测效能；③ 高SHR与更差预后相关；④ 局限：单数据库无外验证；SHR计算需要HbA1c，部分ICU可能无法获取。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">SHR vs APACHE-II vs SOFA（具体对比数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>SHR作为血糖校正指标（相比单纯血糖值更能反映应激程度）是近年新兴标志物，本文首次将其引入AKI预后ML预测框架，有一定创新性。</div>
+<div class="su">SHR（应激性高血糖比值）是AKI患者28天死亡率的独立预测因子，联合ML模型可提升预测准确度，为AKI的代谢评估提供了新的生物标志物工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1177/20552076261421140" target="_blank">https://doi.org/10.1177/20552076261421140</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 3 篇 | Comparative machine learning to predict acute kidney injury in traumatic brain injury: a MIMIC-IV cohort with SHAP interpretation</div>
+<div class="cn">比较机器学习预测创伤性脑损伤患者急性肾损伤：MIMIC-IV队列+SHAP解释</div>
+<div class="pm">
+  <span>Frontiers in Medicine</span><span>2026-03</span>
+  <span>DOI: 10.3389/fmed.2026.1712221</span><span>作者: Gu Zhenxing, Qian Kang, Wang Xigang</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag TBI-AKI">TBI-AKI</span><span class="tag SHAP解释">SHAP解释</span><span class="tag 外部验证">外部验证</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>TBI（创伤性脑损伤）成年患者，85,242例首次ICU入院中筛选后纳入2,986例，来自MIMIC-IV。AKI定义：KDIGO标准。结局：AKI发生（院内）。特征提取时间窗：入院24小时内。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生理指标、实验室指标、干预措施（渗透压治疗、甘露醇等）。<br><b>预处理：</b>数据归一化、缺失值插补。<br><b>特征选择：</b>LASSO + Boruta + Bootstrap验证的Logistic回归三重筛选。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>7种ML模型对比：LR、DT、RF、XGBoost、LightGBM、SVM、ANN。<br><b>主指标：</b>AKI发生预测AUROC。<br><b>验证：</b>70%训练/30%验证划分。<br><b>校准：</b>报告校准曲线。<br><b>可解释性：</b>SHAP解释各模型输出。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、特征选择过程图（LASSO + Boruta）、7模型ROC对比曲线、多模型AUROC柱状图、SHAP蜂群图（全局）、SHAP依赖图（单个特征与AKI关系）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① TBI患者AKI发生率及危险因素；② XGBoost/LightGBM在AKI预测中表现最优；③ SHAP揭示AKI关键预测因子（GCS评分、尿量、渗透压治疗等）；④ LASSO+Boruta双重特征选择有效降维；⑤ 局限：单数据库回顾性。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">7种ML模型vs传统评分（APACHE-II/ICN）对比，具体AUROC数值见原文。</div></div>
+<div class="imp"><b>增量：</b>首个聚焦「TBI-AKI」这一特殊亚群（创伤患者肾脏保护）的比较ML研究，方法学亮点是三重特征选择（LASSO+Boruta+Bootstrap LR），对开题「特征工程」设计有参考价值。</div>
+<div class="su">XGBoost/LightGBM可准确预测TBI患者院内AKI发生，LASSO+Boruta三重特征选择有效降维，SHAP揭示GCS评分、尿量等为核心驱动因子，为TBI患者肾脏保护提供预测工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.3389/fmed.2026.1712221" target="_blank">https://doi.org/10.3389/fmed.2026.1712221</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 4 篇 | Machine Learning Models for Predicting 28-Day Mortality in Gastrointestinal Bleeding with Acute Kidney Injury: A MIMIC-IV-Based Study</div>
+<div class="cn">基于MIMIC-IV的消化道出血伴急性肾损伤患者28天死亡率预测机器学习模型</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2025-10</span>
+  <span>DOI: 10.21203/rs.3.rs-7339661/v1</span><span>作者: Zhang Xiangyu, Hu Yanpeng, Zhu Xingye</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag GIB-AKI">GIB-AKI</span><span class="tag 消化道出血">消化道出血</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>消化道出血（GIB）合并急性肾损伤（AKI）患者，首次ICU入院，来自MIMIC-IV。GIB由ICD编码识别。结局：28天全因死亡率。64个临床变量经LASSO+Boruta筛选特征。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>64个临床变量：人口学、生命体征、实验室指标、消化道出血相关指标（血红蛋白、输血量等）、AKI相关指标。<br><b>特征选择：</b>LASSO回归 + Boruta算法双重筛选。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习多模型（具体模型名称见全文）。<br><b>指标：</b>28天死亡率AUROC、AUPRC。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>校准：</b>报告校准曲线。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、LASSO+Boruta特征筛选图、特征重要性图、多模型ROC/PR曲线对比、校准曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① GIB-AKI患者28天死亡率显著高于单纯GIB或AKI患者；② ML模型可有效预测该复合亚群预后；③ 输血量、血红蛋白、肌酐是核心预测因子；④ 可作为该类患者的早期风险分层工具；⑤ 局限：单数据库回顾性，GIB病因未详细分类。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">与APACHE-II、SOFA等传统评分对比，ML模型AUROC明显更优（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>首个聚焦「GIB-AKI」这一双重危重亚群（消化道出血+急性肾损伤叠加）的ML预测研究，该人群病死率极高但相关精准预测工具缺乏。</div>
+<div class="su">GIB-AKI患者28天死亡风险显著升高，ML模型可有效预测该高危复合亚群预后，输血量和肾功能指标是核心预测因子，为ICU消化道出血合并AKI患者提供早期预警工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.21203/rs.3.rs-7339661/v1" target="_blank">https://doi.org/10.21203/rs.3.rs-7339661/v1</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 5 篇 | Harness machine learning for multiple prognoses prediction in sepsis patients: evidence from the MIMIC-IV database</div>
+<div class="cn">利用机器学习预测脓毒症患者多种不良预后：MIMIC-IV数据库证据</div>
+<div class="pm">
+  <span>BMC Medical Informatics and Decision Making（IF≈2.5）</span><span>2025-03</span>
+  <span>DOI: 10.1186/s12911-025-02976-y</span><span>作者: Zhang Su-Zhen, Ding Hai-Yi</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 脓毒症多预后">脓毒症多预后</span><span class="tag BMC">BMC</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>脓毒症（SEPSIS-3定义）成年患者，来自MIMIC-IV数据库。结局：多种不良预后（28天死亡率、住院死亡率、ICU-LOS延长）复合终点。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生命体征、实验室指标、器官功能评分、合并症等。<br><b>方法：</b>Logistic回归、随机森林、CatBoost多模型对比。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>Logistic回归、随机森林、CatBoost多模型对比。<br><b>指标：</b>28天死亡率、住院死亡率、ICU住院时长。<br><b>验证：</b>MIMIC-IV内部验证（具体划分方式见全文）。<br><b>校准：</b>报告校准曲线。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">脓毒症患者基线特征表、多模型ROC对比（多终点）、特征重要性图、校准曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① ML模型可同时预测脓毒症多种不良预后；② CatBoost在多终点预测中表现优于LR和RF；③ 器官衰竭数量、乳酸、最大呼吸频率是核心预测因子；④ 可作为脓毒症多维度风险评估工具；⑤ 局限：单数据库无外部验证。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">CatBoost vs LR vs RF：AUROC对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>同时预测脓毒症「多种不良预后」（死亡率+住院时长）的多任务ML框架，可同时生成多个预测结果，临床实用性较强。但与Paper 3/10相比方法学规范度较低。</div>
+<div class="su">CatBoost可同时预测脓毒症28天死亡率、住院死亡率和ICU住院时长，多任务学习框架临床实用性强，器官衰竭数量和乳酸是核心预测因子，为脓毒症多维度风险评估提供综合工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1186/s12911-025-02976-y" target="_blank">https://doi.org/10.1186/s12911-025-02976-y</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 6 篇 | Predictive value of albumin-corrected anion gap for acute kidney injury risk assessment in sepsis: Insights from MIMIC-IV</div>
+<div class="cn">白蛋白校正阴离子间隙预测脓毒症急性肾损伤风险的评估价值：MIMIC-IV启示</div>
+<div class="pm">
+  <span>Journal of Investigative Medicine</span><span>2025-07</span>
+  <span>DOI: 10.1177/10815589251348930</span><span>作者: Nie Jing, Qi Shengyao</span>
+  <span class="tag 传统回归">传统回归</span><span class="tag ACAG">ACAG</span><span class="tag AKI风险预测">AKI风险预测</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>脓毒症（SEPSIS-3定义）成年患者，来自MIMIC-IV。暴露：白蛋白校正阴离子间隙（ACAG）。结局：AKI发生（KDIGO标准）。ACAG定义：实测阴离子间隙 + 2.5 ×（4 - 白蛋白g/dL）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>ACAG、人口学、生命体征、实验室指标（电解质、肌酐等）、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>传统统计方法（具体方法见全文）。<br><b>指标：</b>AKI发生率、OR、HR。<br><b>验证：</b>无外部验证。<br><b>校准：</b>未详述。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">ACAG分组基线特征表、AKI发生率对比图、Cox/Logistic回归森林图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① ACAG升高与脓毒症患者AKI风险增加显著相关；② ACAG可作为AKI早期预测的生物标志物；③ 高ACAG是独立危险因素；④ 可作为脓毒症患者AKI早期筛查工具；⑤ 局限：单数据库观察性研究，无法建立因果关系。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ACAG vs 传统阴离子间隙 vs APACHE-II对AKI预测能力对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>ACAG（白蛋白校正阴离子间隙）作为酸碱失衡标志物在AKI预测中的应用，提供了代谢-肾功能联合评估的新视角。虽为传统统计方法，但对开题「危险因素探索」和「评分指标选择」有参考价值。</div>
+<div class="su">ACAG（白蛋白校正阴离子间隙）是脓毒症患者AKI风险的独立预测因子，高ACAG提示更差的肾脏预后，可作为脓毒症患者AKI早期筛查的简单代谢指标。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1177/10815589251348930" target="_blank">https://doi.org/10.1177/10815589251348930</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 7 篇 | Association of Anion Gap to Bicarbonate Ratio (ABR) with 28-Day Mortality in ICU Sepsis: A Retrospective Cohort Study Based on the MIMIC-IV Database</div>
+<div class="cn">阴离子间隙与碳酸氢盐比值（ABR）与ICU脓毒症患者28天死亡率的相关性：基于MIMIC-IV数据库的回顾性队列研究</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2025-03</span>
+  <span>DOI: 10.21203/rs.3.rs-6234181/v1</span><span>作者: Chi Chuntian, Zhou Jian</span>
+  <span class="tag 传统回归">传统回归</span><span class="tag ABR">ABR</span><span class="tag 脓毒症代谢标志物">脓毒症代谢标志物</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU脓毒症（SEPSIS-3定义）成年患者，来自MIMIC-IV。暴露：阴离子间隙与碳酸氢盐比值（ABR = AG / HCO3-）。结局：28天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>ABR、人口学、生命体征、实验室指标（电解质、酸碱状态）、合并症、SOFA评分。<br><b>非线性分析：</b>采用限制性立方样条（RCS）评估ABR与死亡率的非线性剂量-反应关系。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>传统统计方法（Cox回归 + RCS）。<br><b>敏感性分析：</b>多种ABR阈值定义的稳健性检验。<br><b>验证：</b>无外部验证。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">ABR分组基线特征表、Cox回归森林图（单因素+多因素HR及95%CI）、RCS剂量-反应曲线、KM生存曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① ABR升高与脓毒症28天死亡率显著相关；② ABR与死亡率呈非线性剂量-反应关系；③ ABR可作为代谢紊乱程度的综合评估指标；④ 可辅助识别高危脓毒症患者；⑤ 局限：回顾性观察性研究，无法建立因果关系；单数据库无外验证。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ABR vs APACHE-II vs SOFA对28天死亡率预测能力对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>ABR（阴离子间隙/碳酸氢盐比值）反映代谢性酸中毒的严重程度，是近年新兴的代谢评估指标。本文以脓毒症为研究人群，提供了代谢-预后关联的新证据。虽为传统统计方法，但RCS非线性分析是标准做法。</div>
+<div class="su">ABR（阴离子间隙与碳酸氢盐比值）是ICU脓毒症患者28天死亡率的独立预测因子，与死亡率呈非线性剂量-反应关系，可作为脓毒症代谢紊乱严重程度的综合评估指标。</div>
+<div class="link">🔗 <a href="https://doi.org/10.21203/rs.3.rs-6234181/v1" target="_blank">https://doi.org/10.21203/rs.3.rs-6234181/v1</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 8 篇 | Relationship between coagulopathy score and ICU mortality: Analysis of the MIMIC-IV database</div>
+<div class="cn">凝血病评分与ICU死亡率的关系：MIMIC-IV数据库分析</div>
+<div class="pm">
+  <span>Heliyon</span><span>2024-07</span>
+  <span>DOI: 10.1016/j.heliyon.2024.e34644</span><span>作者: Xie Zhijie, Zhu Suijun</span>
+  <span class="tag 传统统计">传统统计</span><span class="tag 凝血病评分">凝血病评分</span><span class="tag 脓毒症凝血功能障碍">脓毒症凝血功能障碍</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU成年患者（具体纳排摘要未详），来自MIMIC-IV数据库。暴露：凝血病评分（coagulopathy score）。结局：ICU全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>凝血病评分、人口学、生命体征、实验室凝血指标（PT、APTT、FIB等）、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>传统统计方法（具体方法见全文）。<br><b>验证：</b>无外部验证。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">凝血病评分分组基线特征表、ICU死亡率对比图、多因素回归分析结果（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 凝血病评分升高与ICU死亡率增加显著相关；② 凝血功能障碍是ICU死亡的独立危险因素；③ 高凝血病评分患者预后显著更差；④ 局限：摘要信息有限，需查阅全文评估。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">凝血病评分 vs APACHE-II/SOFA对ICU死亡率预测能力对比（具体数值见原文）。</div></div>
+<div class="imp"><b>注意：</b>本文为传统统计（非ML）研究，发表于2024年，方法学报告在摘要中极为有限。建议查阅全文后评估引用价值。</div>
+<div class="su">凝血病评分是ICU患者死亡率的独立预测因子，评分越高预后越差，可作为ICU凝血功能评估的简单工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1016/j.heliyon.2024.e34644" target="_blank">https://doi.org/10.1016/j.heliyon.2024.e34644</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 9 篇 | Integrating Machine Learning and SHAP for Interpretable Prediction of 28-Day Mortality in ICU Patients: A Comprehensive Analysis of Initial Physiological Features</div>
+<div class="cn">机器学习与SHAP结合预测ICU患者28天死亡率：基于入院生理特征的综合分析</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2025-11</span>
+  <span>DOI: 10.21203/rs.3.rs-8067228/v1</span><span>作者: Long Zhanzhi, Tong Shijun</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag SHAP解释">SHAP解释</span><span class="tag 通用ICU预后">通用ICU预后</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU成年患者，来自MIMIC-IV数据库。纳入标准：首次ICU入院、有完整入院生理数据。结局：28天全因死亡率。特征：入院初始生理参数（入院首个24小时内的生命体征、实验室指标）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>入院初始生理特征（体温、心率、血压、呼吸频率、SpO2等生命体征，实验室指标）。<br><b>特征选择：</b>采用SHAP+LASSO进行特征筛选（数据驱动）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习模型（具体模型见全文）+ SHAP可解释性分析。<br><b>主指标：</b>28天死亡率AUROC。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>校准：</b>报告校准曲线。<br><b>可解释性：</b>SHAP全局特征重要性 + 个体化SHAP解释。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">入院生理特征分布图、多模型ROC对比曲线、SHAP蜂群图（全局特征重要性）、SHAP依赖图（单个生理参数与死亡率关系）、校准曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 初始生理参数可有效预测ICU患者28天死亡率；② SHAP+LASSO筛选出最关键的生理预测因子；③ 模型具有较好校准能力；④ 可用于ICU患者入院时快速风险分层；⑤ 局限：单数据库无外部验证；仅用入院数据无法捕捉病程动态变化。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ML模型 vs APACHE-II vs SOFA对比，具体AUROC数值见原文。</div></div>
+<div class="imp"><b>增量：</b>聚焦「入院初始生理参数」这一极易获取的数据（无需额外检查）构建ML预测模型，强调「数据极简」和「可解释性」，符合临床快速分诊场景需求。SHAP+LASSO联合特征筛选是方法学亮点。</div>
+<div class="su">基于入院24小时生理参数的ML+SHAP模型可准确预测ICU患者28天死亡率，SHAP+LASSO筛选出关键生理预测因子，模型简洁易于临床部署，为ICU入院快速风险分层提供工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.21203/rs.3.rs-8067228/v1" target="_blank">https://doi.org/10.21203/rs.3.rs-8067228/v1</a></div>
+
+
+</div>
+<div class="p">
+<div class="t">📄 第 10 篇 | Development of a prediction model for the risk of prolonged ICU length of stay in patients undergoing coronary artery bypass surgery: A retrospective analysis based on the MIMIC-IV database</div>
+<div class="cn">冠状动脉旁路移植术后ICU住院时长延长风险预测模型的开发：基于MIMIC-IV数据库的回顾性分析</div>
+<div class="pm">
+  <span>Medicine (IF≈1.6)</span><span>2026-04</span>
+  <span>DOI: 10.1097/md.0000000000048224</span><span>作者: Zhang Peipei, Zhang Xuping</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag CABG">CABG</span><span class="tag ICU住院时长预测">ICU住院时长预测</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>冠状动脉旁路移植术（CABG）后ICU成年患者，来自MIMIC-IV数据库。结局：ICU住院时长（LOS）延长（定义：>72h或>7d，具体定义见全文）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、术前指标（心功能分级、EF值等）、手术相关因素、术后早期指标（血流动力学、实验室指标等）。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习预测模型（具体模型名称见全文）。<br><b>主指标：</b>ICU-LOS延长预测AUROC、MAE。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>校准：</b>报告校准曲线。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、基线特征表（短期LOS vs 延长LOS）、多模型ROC对比、LOS预测误差分布图、特征重要性图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 多种因素可预测CABG后ICU-LOS延长；② ML模型预测效能优于传统回归；③ 具体预测因子见全文；④ 可用于ICU资源规划和患者预期管理；⑤ 局限：单数据库回顾性，CABG围手术期管理实践存在时代差异。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ML模型 vs Logistic回归对ICU-LOS延长预测能力对比（具体数值见原文）。</div></div>
+<div class="imp"><b>注意：</b>本文研究人群为CABG术后患者（非脓毒症），与你课题（脓毒症AKI）方向不同，直接参考价值有限。但作为「住院时长预测」的ML方法学参考（如模型选择、特征工程流程）有间接参考意义。</div>
+<div class="su">ML模型可有效预测CABG术后ICU住院时长延长，为ICU资源规划和患者预期管理提供工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1097/md.0000000000048224" target="_blank">https://doi.org/10.1097/md.0000000000048224</a></div>
+
+
+</div><div class="di">📌 本日报包含10篇MIMIC-IV+重症医学相关文献<br>⚠️ 部分为预印本，建议正式发表后以PMID引用<br>如需某篇原文，可点击DOI链接直接访问</div></div></body></html>
