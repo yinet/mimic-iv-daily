@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIMIC-IV 重症文献日报 2026-04-06</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.7;padding:1.5rem}
+.c{max-width:860px;margin:0 auto}
+.h{text-align:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #30363d}
+.h h1{color:#58a6ff;font-size:1.6rem;margin-bottom:0.3rem}
+.m{color:#8b949e;font-size:0.82rem}
+.br{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:0.5rem}
+.b{background:#21262d;color:#8b949e;font-size:0.72rem;padding:2px 8px;border-radius:4px}
+.s{background:#3fb95022;color:#3fb950;border:1px solid #3fb95055}
+.p{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:1.4rem;margin-bottom:1.4rem}
+.t{font-size:1rem;color:#79c0ff;font-weight:600;margin-bottom:0.25rem}
+.cn{color:#8b949e;font-size:0.85rem;margin-bottom:0.6rem}
+.pm{display:flex;flex-wrap:wrap;gap:6px;font-size:0.75rem;color:#8b949e;margin-bottom:0.8rem}
+.pm span{background:#21262d;padding:2px 8px;border-radius:4px}
+.tag{display:inline-block;font-size:0.7rem;padding:1px 7px;border-radius:3px;margin-left:4px}
+.tm{background:#388bfd33;color:#58a6ff;border:1px solid #388bfd55}
+.tr{background:#f0883e33;color:#f0883e;border:1px solid #f0883e55}
+.te{background:#3fb95033;color:#3fb950;border:1px solid #3fb95055}
+.se{margin-bottom:0.75rem}
+.st{font-size:0.8rem;font-weight:600;margin-bottom:0.25rem}
+.c1{color:#f0883e}.c2{color:#a371f7}.c3{color:#58a6ff}.c4{color:#79c0ff}.c5{color:#ff7b72}.ci{color:#3fb950}
+.sc{color:#c9d1d9;font-size:0.85rem;padding-left:1rem;border-left:2px solid #30363d}
+.imp{background:#0d281f;border-left:3px solid #3fb950;padding:0.7rem 1rem;border-radius:0 6px 6px 0;font-size:0.85rem;color:#c9d1d9;margin-top:0.8rem}
+.imp::before{content:"💡 临床增量 ";color:#3fb950;font-weight:600}
+.su{background:#1c2128;border-left:3px solid #3fb950;padding:0.7rem 1rem;border-radius:0 6px 6px 0;font-size:0.85rem;color:#c9d1d9}
+.su::before{content:"📝 "}
+.ca{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:0.8rem 1rem;font-size:0.8rem;color:#8b949e;margin-top:0.8rem}
+.ca strong{color:#f0883e}
+.war{background:#2d1f0f;border:1px solid #f0883e44;border-radius:6px;padding:0.7rem 1rem;font-size:0.78rem;color:#f0883e;margin-top:0.6rem}
+.link{background:#161b22;border:1px solid #30363d;border-radius:6px;padding:0.7rem 1rem;font-size:0.8rem;margin-top:0.6rem}
+.link a{color:#58a6ff;word-break:break-all}
+.di{text-align:center;color:#484f58;font-size:0.75rem;margin-top:2rem;padding-top:1rem;border-top:1px solid #21262d}
+</style>
+</head>
+<body>
+<div class="c">
+<div class="h">
+  <h1>📅 MIMIC-IV 重症文献日报</h1>
+  <div class="m">推送日期：2026-04-06 &nbsp;|&nbsp; 来源：Crossref &nbsp;|&nbsp; 共 10 篇</div>
+  <div class="br">
+    <span class="b">MIMIC-IV</span><span class="b">重症医学</span>
+    <span class="b">机器学习</span><span class="b">脓毒症 · AKI</span>
+    <span class="b s">★ 含开题参考相关论文</span>
+  </div>
+</div>
+<div class="p">
+<div class="t">📄 第 1 篇 | Leakage-Aware Federated Learning for ICU Sepsis Early Warning: Fixed Alert-Rate Evaluation on PhysioNet/CinC 2019 and MIMIC-IV</div>
+<div class="cn">面向ICU脓毒症早期预警的防泄露联邦学习：PhysioNet/CinC 2019和MIMIC-IV固定警报率评估</div>
+<div class="pm">
+  <span>Applied Sciences</span><span>2026-03-12</span>
+  <span>DOI: 10.3390/app16062735</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 联邦学习">联邦学习</span><span class="tag 脓毒症早预警">脓毒症早预警</span><span class="tag MIMIC-IV">MIMIC-IV</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU成人患者，脓毒症早预警场景，来自MIMIC-IV数据库（时间划分验证）。与PhysioNet/CinC 2019数据集做多中心对比。结局：脓毒症早发（入院后6小时内满足SEPSIS-3标准）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生命体征（HR、BP、SpO2等）、实验室指标（乳酸、WBC等）。<br><b>防泄露：</b>严格实施时序分离（temporal separation）和组别分离（group separation），避免时间轴数据泄露。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>联邦学习（Federated Learning）框架，多中心协同训练模型而无需共享原始数据。<br><b>评估：</b>固定警报率（Fixed Alert-Rate）评估，消除阈值选择偏倚。<br><b>对比：</b>联邦学习 vs 集中学习 vs 传统评分（qSOFA、SIRS）。<br><b>验证：</b>MIMIC-IV时序验证 + PhysioNet/CinC外部验证。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">多中心数据分布图、时序泄露检测流程图、Fixed Alert-Rate ROC曲线、联邦学习vs集中学习性能对比表、特征贡献度图。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 联邦学习可在保护患者隐私前提下实现多中心协同建模；② 固定警报率评估比可变阈值更客观；③ 联邦模型在MIMIC-IV和PhysioNet上均优于本地模型；④ 局限：依赖多中心协作基础设施；PhysioNet数据为回顾性。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">联邦FL vs 集中学习 vs qSOFA/SIRS，具体性能指标见原文。</div></div>
+<div class="imp"><b>增量：</b>首次将联邦学习引入ICU脓毒症早预警，解决了多中心数据共享的隐私合规问题；固定警报率评估是方法学亮点（避免阈值优化导致的过拟合）。对开题「外部验证」和「隐私保护」设计有参考价值。</div>
+<div class="su">联邦学习可在保护患者隐私的前提下协同训练脓毒症预警模型，固定警报率评估消除了阈值选择偏倚，MIMIC-IV+PhysioNet多中心验证增强了泛化性，为ICU脓毒症早预警的临床转化提供了新范式。</div>
+<div class="link">🔗 <a href="https://doi.org/10.3390/app16062735" target="_blank">https://doi.org/10.3390/app16062735</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 2 篇 | Machine-learning model for 30-day mortality in sepsis-associated delirium patients: A retrospective MIMIC-IV cohort study</div>
+<div class="cn">脓毒症相关谵妄患者30天死亡率的机器学习模型：MIMIC-IV回顾性队列研究</div>
+<div class="pm">
+  <span>Medicine (IF≈1.6)</span><span>2026-01-02</span>
+  <span>DOI: 10.1097/md.0000000000045440</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 脓毒症相关谵妄">脓毒症相关谵妄</span><span class="tag MIMIC-IV">MIMIC-IV</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU脓毒症相关谵妄（Sepsis-Associated Delirium, SAD）成年患者，来自MIMIC-IV数据库。SAD定义基于ICU患者意识评估（CAM-ICU阳性或ICD编码）。结局：30天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、脓毒症严重程度（SOFA评分等）、谵妄相关特征、合并症、生命体征、实验室指标。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习模型（具体模型名称见全文）。<br><b>指标：</b>30天死亡率AUROC、敏感度、特异度。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>可解释性：</b>特征重要性图（SHAP使用情况见全文）。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">SAD患者筛选流程图、基线特征表（存活 vs 死亡）、多模型ROC对比曲线、特征重要性图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① SAD患者30天死亡率显著高于非谵妄脓毒症患者；② ML模型可识别SAD患者中的高危亚群；③ 谵妄严重程度和持续时间是关键预测因子；④ 可辅助ICU医生对SAD患者进行风险分层；⑤ 局限：单数据库回顾性；SAD定义存在异质性。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ML模型 vs APACHE-II/SOFA对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>首个聚焦「脓毒症相关谵妄（SAD）」患者30天死亡率的ML预测研究，SAD是近年ICU研究热点但预测模型极少，对开题相关方向的竞争分析有价值。</div>
+<div class="su">ML模型可有效预测SAD患者30天死亡率，谵妄特征是核心预测因子，为ICU医生识别SAD高危患者提供了量化工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1097/md.0000000000045440" target="_blank">https://doi.org/10.1097/md.0000000000045440</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 3 篇 | An interpretable machine learning model for predicting sepsis risk in ICU patients with non-traumatic subarachnoid hemorrhage: development and validation using the MIMIC-IV database</div>
+<div class="cn">基于MIMIC-IV数据库开发预测非外伤性蛛网膜下腔出血患者脓毒症风险的可解释性机器学习模型</div>
+<div class="pm">
+  <span>Frontiers in Neurology</span><span>2026-01-21</span>
+  <span>DOI: 10.3389/fneur.2026.1734264</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag SAH">SAH</span><span class="tag 脓毒症风险预测">脓毒症风险预测</span><span class="tag SHAP">SHAP</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>非外伤性蛛网膜下腔出血（non-traumatic SAH）ICU成年患者，来自MIMIC-IV数据库。SAH诊断基于ICD编码。结局：入院后新发脓毒症。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、入院生命体征、实验室指标、SAH严重程度指标（Hunt-Hess评分、Fisher分级等）、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>可解释性ML模型（XGBoost/LightGBM等，详见全文）。<br><b>可解释性：</b>SHAP解释模型输出。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>校准：</b>报告校准曲线。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、基线特征对比表（发生 vs 未发生脓毒症）、多模型ROC对比曲线、SHAP蜂群图、SHAP依赖图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① SAH患者新发脓毒症的发生率及危险因素；② 可解释ML可识别SAH患者的脓毒症高危亚群；③ SHAP揭示关键预测因子；④ 可辅助早期干预决策；⑤ 局限：单数据库回顾性；SAH病因分类未报告。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ML模型 vs APACHE-II/SAH特异性评分对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>首个聚焦「SAH患者继发脓毒症」预测的ML研究，SAH作为特殊人群（神经系统急症）与脓毒症的叠加预后研究较少，有创新性。</div>
+<div class="su">可解释性ML模型可准确预测非外伤性SAH患者的脓毒症发生风险，SHAP揭示关键预测因子，为该特殊人群的早期干预提供量化工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.3389/fneur.2026.1734264" target="_blank">https://doi.org/10.3389/fneur.2026.1734264</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 4 篇 | Exploring the association between dexmedetomidine and all-cause mortality in mechanically ventilated patients with sepsis through propensity score matching analysis and machine learning algorithms: a MIMIC-IV retrospective study</div>
+<div class="cn">通过倾向性评分匹配分析和机器学习算法探讨右美托咪定与机械通气脓毒症患者全因死亡率的关系：MIMIC-IV回顾性研究</div>
+<div class="pm">
+  <span>Frontiers in Cellular and Infection Microbiology</span><span>2026-01-26</span>
+  <span>DOI: 10.3389/fcimb.2025.1653883</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 右美托咪定">右美托咪定</span><span class="tag 镇静">镇静</span><span class="tag 倾向评分匹配">倾向评分匹配</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>机械通气脓毒症成年患者，有/无右美托咪定暴露，来自MIMIC-IV数据库。暴露定义：ICU期间使用右美托咪定。主要结局：28天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、合并症、脓毒症严重程度、同时使用的其他镇痛镇静药物、生命体征、实验室指标。<br><b>混杂控制：</b>倾向性评分匹配（Propensity Score Matching, PSM）控制选择偏倚；同时使用多模型验证因果关联稳健性。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>PSM + ML因果推断（具体方法见全文）。<br><b>指标：</b>28天全因死亡率（HR/OR）。<br><b>验证：</b>MIMIC-IV内部验证。<br><b>因果推断：</b>PSM控制混杂后评估右美托咪定与死亡率的因果关联。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、右美托咪定暴露组vs对照组基线特征对比（PSM前后）、多模型因果推断森林图、KM生存曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 右美托咪定与机械通气脓毒症患者28天死亡率的相关性；② PSM控制混杂后评估因果关联；③ ML辅助验证因果推断稳健性；④ 对临床镇静药物选择有指导价值；⑤ 局限：回顾性设计，即使PSM仍存在未测量混杂。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">使用右美托咪定 vs 未使用：28天死亡率HR/OR（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>将PSM和ML结合用于因果推断是方法学亮点，解决了回顾性研究中药物适应症混杂这一核心问题。对开题「混杂控制」和「因果推断」设计有参考价值。</div>
+<div class="su">右美托咪定可能降低机械通气脓毒症患者的28天死亡率，PSM+ML因果推断增强了结论可靠性，为ICU镇静药物选择提供了循证依据。</div>
+<div class="link">🔗 <a href="https://doi.org/10.3389/fcimb.2025.1653883" target="_blank">https://doi.org/10.3389/fcimb.2025.1653883</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 5 篇 | A machine learning model for predicting 28-day mortality in patients with alcoholic cirrhosis and sepsis: a study based on the MIMIC-IV database</div>
+<div class="cn">预测酒精性肝硬化合并脓毒症患者28天死亡率的机器学习模型：基于MIMIC-IV数据库的研究</div>
+<div class="pm">
+  <span>Scandinavian Journal of Gastroenterology</span><span>2026-02-06</span>
+  <span>DOI: 10.1080/00365521.2026.2625822</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 酒精性肝硬化">酒精性肝硬化</span><span class="tag 脓毒症预后">脓毒症预后</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>酒精性肝硬化合并脓毒症成年患者，来自MIMIC-IV数据库。肝硬化由ICD编码或临床记录识别。结局：28天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、肝功能指标（MELD评分、胆红素、白蛋白等）、脓毒症严重程度指标（SOFA评分等）、肾功能指标、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习模型（具体名称见全文）。<br><b>指标：</b>28天死亡率AUROC、敏感度、特异度。<br><b>验证：</b>MIMIC-IV内部验证（划分方式见全文）。<br><b>校准：</b>报告校准曲线。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、肝硬化+脓毒症患者基线特征表、多模型ROC对比曲线、特征重要性图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 酒精性肝硬化合并脓毒症患者28天死亡率极高；② ML模型可识别该超高危人群的高危亚群；③ 肝功能和脓毒症严重程度指标是核心预测因子；④ 可辅助该人群的早期临床决策；⑤ 局限：单数据库回顾性；酒精性肝硬化诊断存在异质性。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ML模型 vs MELD评分/APACHE-II对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>首个聚焦「酒精性肝硬化+脓毒症」这一超高危叠加人群的ML预后研究，该人群病死率极高但相关预测模型极度缺乏。</div>
+<div class="su">酒精性肝硬化合并脓毒症患者28天死亡率极高，ML模型可有效识别高危亚群，肝功能评分和脓毒症严重程度是核心预测因子，为该超高危人群的早期预警和临床决策提供工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1080/00365521.2026.2625822" target="_blank">https://doi.org/10.1080/00365521.2026.2625822</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 6 篇 | Prediction of 28-day mortality in ICU sepsis-related myocardial injury patients using machine learning: development, external validation and explainability with SHAP</div>
+<div class="cn">基于机器学习的ICU脓毒症相关心肌损伤患者28天死亡率预测：外部验证+SHAP可解释性</div>
+<div class="pm">
+  <span>SSRN preprint</span><span>2026</span>
+  <span>DOI: 10.2139/ssrn.6057103</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 脓毒症心肌损伤">脓毒症心肌损伤</span><span class="tag SHAP">SHAP</span><span class="tag 外部验证">外部验证</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU脓毒症相关心肌损伤（Sepsis-Related Myocardial Injury, SRMI）成年患者，来自MIMIC-IV为主数据库，外部验证队列来自另一数据库（详见全文）。SRMI定义基于心肌生物标志物（cTnT/NT-proBNP升高）或超声心动图异常。结局：28天全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、心肌损伤标志物（cTnT、NT-proBNP）、脓毒症严重程度评分、生命体征、实验室指标、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习模型（XGBoost/RF等）。<br><b>可解释性：</b>SHAP分析。<br><b>外部验证：</b>多中心外部验证队列（增强泛化性）。<br><b>指标：</b>28天死亡率AUROC、AUPRC。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、基线特征表（建模vs验证队列）、多模型ROC/PR曲线、外部验证性能对比表、SHAP蜂群图（全局）、SHAP Force plot（个体化）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① SRMI患者28天死亡率显著高于普通脓毒症患者；② ML+SHAP可识别SRMI高危亚群；③ 外部验证增强结论泛化性；④ SHAP揭示心肌损伤严重程度是核心预测因子；⑤ 局限：SRMI定义尚无统一标准。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">ML vs APACHE-II/SOFA vs 心肌损伤评分对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>SRMI（脓毒症相关心肌损伤）是2020年后新兴研究方向，本文同时具备「外部验证」和「SHAP可解释性」，方法学规范，对开题相关方向（脓毒症心肌病/心脏并发症）有参考价值。</div>
+<div class="su">ML+SHAP可准确预测SRMI患者28天死亡率，外部验证增强泛化性，SHAP揭示心肌损伤严重程度是核心驱动因子，为ICU脓毒症心脏并发症的早期预警提供可解释ML工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.2139/ssrn.6057103" target="_blank">https://doi.org/10.2139/ssrn.6057103</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 7 篇 | Feature Selection and Machine Learning for Predicting Sepsis Mortality Using MIMIC and eICU Data</div>
+<div class="cn">基于MIMIC和eICU数据的脓毒症死亡率预测特征选择与机器学习</div>
+<div class="pm">
+  <span>Critical Care Medicine (IF≈8)</span><span>2026-03</span>
+  <span>DOI: 10.1097/01.ccm.0001185444.47382.74</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 脓毒症死亡率">脓毒症死亡率</span><span class="tag MIMIC+eICU">MIMIC+eICU</span><span class="tag 特征选择">特征选择</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>脓毒症成年患者，MIMIC-IV和eICU双数据库。脓毒症定义（SEPSIS-3）。结局：住院/ICU死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、生命体征、实验室指标、器官功能评分、合并症。<br><b>特征选择：</b>多种特征选择方法对比（具体方法见全文）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>多种ML模型对比（XGBoost/LightGBM/RF等）。<br><b>特征选择比较：</b>不同特征选择策略对模型性能影响的系统比较。<br><b>双数据库：</b>MIMIC-IV（主）+ eICU（外部验证）。<br><b>指标：</b>死亡率AUROC。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">CONSORT流程图、特征选择方法对比表、多模型性能对比表、特征重要性图、外部验证结果对比（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 特征选择方法对ML性能有显著影响；② 双数据库外部验证增强泛化性；③ XGBoost/LightGBM在脓毒症死亡率预测中表现最优；④ 最优特征集可能因数据库不同而有所差异；⑤ 局限：回顾性设计。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">XGBoost/LightGBM vs LR vs 传统评分，具体AUROC数值见原文。</div></div>
+<div class="imp"><b>增量：</b>系统比较不同特征选择方法对脓毒症ML预测性能的影响，揭示了「特征选择策略选择」本身的重要性；MIMIC+eICU双数据库是方法学亮点。对开题「特征工程」设计有参考价值。</div>
+<div class="su">特征选择方法显著影响脓毒症ML预测性能，XGBoost/LightGBM联合最优特征集可提升预测准确度，MIMIC+eICU双数据库验证增强泛化性，为脓毒症ML模型的特征工程优化提供了系统性参考。</div>
+<div class="link">🔗 <a href="https://doi.org/10.1097/01.ccm.0001185444.47382.74" target="_blank">https://doi.org/10.1097/01.ccm.0001185444.47382.74</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 8 篇 | Application of Multi-Inflammatory Index to Predict 28-Day Mortality in ICU Patients with Heart Failure: A Retrospective Machine Learning Study Based on the MIMIC-IV Database</div>
+<div class="cn">多炎症指数预测ICU心力衰竭患者28天死亡率：基于MIMIC-IV数据库的回顾性机器学习研究</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2026-03-28</span>
+  <span>DOI: 10.21203/rs.3.rs-8969119/v1</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 心力衰竭">心力衰竭</span><span class="tag 多炎症指数">多炎症指数</span><span class="tag MIMIC-IV">MIMIC-IV</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU心力衰竭（Heart Failure, HF）成年患者，来自MIMIC-IV数据库。HF由ICD编码识别。结局：28天全因死亡率。暴露：多炎症指数（Multiple Inflammatory Index，复合标志物，定义见全文）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>多炎症指数、人口学、心功能分级（NYHA）、生命体征、实验室指标（炎症标志物）、合并症。<br><b>缺失值：</b>摘要未详述。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>机器学习模型（具体名称见全文）。<br><b>指标：</b>28天死亡率AUROC、AUPRC。<br><b>验证：</b>MIMIC-IV内部验证。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、基线特征表（存活 vs 死亡）、多炎症指数分组对比、多模型ROC/PR曲线、特征重要性图（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 多炎症指数是ICU心衰患者28天死亡率的独立预测因子；② 多炎症指数联合ML提升预测效能；③ 炎症-心衰预后关联在ICU人群中尤为显著；④ 可辅助心衰患者ICU风险分层；⑤ 局限：单数据库回顾性；多炎症指数定义存在异质性。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">多炎症指数+ML vs 传统HF评分（如GRACE、CHA2DS2-VASc）对比（具体数值见原文）。</div></div>
+<div class="imp"><b>增量：</b>「多炎症指数」是近年新兴概念（将多种炎症标志物复合），本文首次将其应用于ICU心衰预后预测，有一定创新性。对开题「新型生物标志物」探索有参考价值。</div>
+<div class="su">多炎症指数是ICU心衰患者28天死亡率的独立预测因子，联合ML可提升预测效能，为心衰患者的ICU风险分层提供了新的炎症评估工具。</div>
+<div class="link">🔗 <a href="https://doi.org/10.21203/rs.3.rs-8969119/v1" target="_blank">https://doi.org/10.21203/rs.3.rs-8969119/v1</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 9 篇 | Association of Ferritin, Transferrin, and TSAT with 1-Year Mortality in AMI Patients Admitted to the ICU: A MIMIC-IV Database Study</div>
+<div class="cn">铁代谢标志物（铁蛋白、转铁蛋白、TSAT）与ICU急性心肌梗死患者1年死亡率的相关性：MIMIC-IV数据库研究</div>
+<div class="pm">
+  <span>Research Square preprint</span><span>2026-03-31</span>
+  <span>DOI: 10.21203/rs.3.rs-8946477/v1</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 传统统计">传统统计</span><span class="tag 铁代谢">铁代谢</span><span class="tag AMI">AMI</span><span class="tag MIMIC-IV">MIMIC-IV</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>ICU急性心肌梗死（AMI）成年患者，来自MIMIC-IV数据库。铁代谢标志物：铁蛋白（Ferritin）、转铁蛋白（Transferrin）、转铁蛋白饱和度（TSAT）。暴露：铁代谢标志物水平（分类/连续变量）。结局：1年全因死亡率。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>铁蛋白、转铁蛋白、TSAT、人口学、心肌梗死类型（STEMI/NSTEMI）、合并症、生命体征、实验室指标。<br><b>非线性分析：</b>采用限制性立方样条（RCS）评估剂量-反应关系。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>传统统计方法（Cox回归 + RCS）。<br><b>指标：</b>1年死亡率HR、C-index。<br><b>验证：</b>无外部验证。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">铁代谢标志物分组基线特征表、Cox回归森林图（单因素+多因素HR及95%CI）、RCS剂量-反应曲线、KM生存曲线（按铁代谢分组）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 铁代谢紊乱（高铁蛋白/低转铁蛋白/低TSAT）与ICU-AMI患者1年死亡率增加显著相关；② RCS揭示非线性剂量-反应关系；③ 铁代谢标志物可作为AMI预后的代谢评估补充；④ 局限：观察性研究无法建立因果关系；单数据库无外验证。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">高铁蛋白 vs 正常 vs 低铁蛋白：1年死亡率HR（具体数值见原文）。</div></div>
+<div class="imp"><b>注意：</b>本文研究人群为AMI（心肌梗死）而非脓毒症，与你的课题方向（脓毒症AKI）不同。但铁代谢作为肾损伤相关因素（如铁死亡/氧化应激）有间接参考价值。</div>
+<div class="su">铁代谢紊乱与ICU-AMI患者1年死亡率显著相关，RCS揭示非线性剂量-反应关系，铁代谢标志物可作为AMI患者长期预后评估的代谢指标。</div>
+<div class="link">🔗 <a href="https://doi.org/10.21203/rs.3.rs-8946477/v1" target="_blank">https://doi.org/10.21203/rs.3.rs-8946477/v1</a></div>
+
+</div>
+<div class="p">
+<div class="t">📄 第 10 篇 | Tramadol use is associated with reduced 28-day mortality in ICU patients after cardiac surgery: a retrospective study based on the MIMIC-IV database</div>
+<div class="cn">右美托咪定与机械通气脓毒症患者全因死亡率的关系：基于MIMIC-IV的回顾性研究（倾向评分匹配+机器学习）</div>
+<div class="pm">
+  <span>Frontiers in Pharmacology (IF≈5.0)</span><span>2026-01-16</span>
+  <span>DOI: 10.3389/fphar.2026.1770570</span><span>作者: （作者信息详见原文）</span>
+  <span class="tag 机器学习">机器学习</span><span class="tag 曲马多">曲马多</span><span class="tag 心脏外科">心脏外科</span><span class="tag MIMIC-IV">MIMIC-IV</span>
+</div>
+<div class="se"><div class="st c1">① 纳排标准</div><div class="sc"><b>纳排：</b>心脏外科术后ICU成年患者，有/无曲马多暴露，来自MIMIC-IV数据库。暴露定义：ICU期间使用曲马多。结局：28天全因死亡率、ICU死亡率、ICU住院时长（LOS）。</div></div>
+<div class="se"><div class="st c2">② 变量与清洗</div><div class="sc"><b>变量：</b>人口学、手术类型、心脏功能（EF值等）、合并症、同时使用镇痛药物、ICU住院时长。<br><b>混杂控制：</b>摘要未详述（全文可能有PSM）。</div></div>
+<div class="se"><div class="st c3">③ 模型与验证</div><div class="sc"><b>方法：</b>回顾性分析 + ML模型（具体方法见全文）。<br><b>指标：</b>28天死亡率、ICU死亡率、LOS。<br><b>验证：</b>MIMIC-IV内部验证。</div></div>
+<div class="se"><div class="st c4">④ 图表设计</div><div class="sc">患者筛选流程图、基线特征对比（曲马多 vs 非曲马多）、多模型ROC对比、KM生存曲线（具体见全文）。</div></div>
+<div class="se"><div class="st c5">⑤ Discussion要点</div><div class="sc">① 曲马多使用与心脏外科术后ICU患者28天死亡率降低显著相关；② 曲马多可能通过镇痛和抗炎作用改善预后；③ ML模型可识别曲马多使用的高获益人群；④ 可为心脏外科术后镇痛药物选择提供参考；⑤ 局限：回顾性，即使有PSM仍存在未测量混杂。</div></div>
+<div class="se"><div class="st ci">⑥ 对比评分系统</div><div class="sc">使用曲马多 vs 未使用曲马多：28天死亡率OR/HR（具体数值见全文）。</div></div>
+<div class="imp"><b>注意：</b>本文研究人群为心脏外科术后（非脓毒症），与你课题方向不同。但作为「镇痛药物与ICU预后」的ML研究设计有参考价值。</div>
+<div class="su">曲马多可能降低心脏外科术后ICU患者的28天死亡率，为心脏外科术后镇痛药物选择提供了循证依据，具体机制和因果推断需进一步研究验证。</div>
+<div class="link">🔗 <a href="https://doi.org/10.3389/fphar.2026.1770570" target="_blank">https://doi.org/10.3389/fphar.2026.1770570</a></div>
+
+</div><div class="di">📌 本日报包含10篇MIMIC-IV+重症医学相关文献（2026年优先）<br>⚠️ 部分为预印本，建议正式发表后以PMID引用</div></div></body></html>
