@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MIMIC-IV 重症文献日报 2026-04-08</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#0d1117;color:#e6edf3;line-height:1.8;padding:1.5rem}
+.c{max-width:900px;margin:0 auto}
+.h{text-align:center;margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #30363d}
+.h h1{color:#58a6ff;font-size:1.8rem;margin-bottom:0.3rem}
+.m{color:#8b949e;font-size:0.85rem;margin-top:0.3rem}
+.br{display:flex;gap:6px;justify-content:center;flex-wrap:wrap;margin-top:0.5rem}
+.b{background:#21262d;color:#8b949e;font-size:0.72rem;padding:2px 8px;border-radius:4px}
+.s{background:#3fb95022;color:#3fb950;border:1px solid #3fb95055}
+.sec{margin-bottom:2rem}
+.sec h2{color:#79c0ff;font-size:1.05rem;border-left:3px solid #3fb950;padding-left:0.8rem;margin-bottom:1rem}
+.p{background:#161b22;border:1px solid #30363d;border-radius:10px;padding:1.2rem;margin-bottom:1.2rem}
+.p h3{color:#79c0ff;font-size:0.95rem;margin-bottom:0.4rem}
+.p .cn{color:#8b949e;font-size:0.82rem;margin-bottom:0.6rem}
+.meta{font-size:0.75rem;color:#8b949e;margin-bottom:0.8rem}
+.meta span{background:#21262d;padding:2px 6px;border-radius:3px;margin-right:4px}
+.tag{display:inline-block;font-size:0.68rem;padding:1px 6px;border-radius:3px;margin-right:3px}
+.tm{background:#388bfd33;color:#58a6ff}
+.tr{background:#f0883e33;color:#f0883e}
+.te{background:#3fb95033;color:#3fb950}
+.item{margin-bottom:0.5rem}
+.lbl{color:#f0883e;font-size:0.8rem;font-weight:600;margin-bottom:0.15rem}
+.cont{color:#c9d1d9;font-size:0.83rem;padding-left:0.8rem}
+.summary{background:#1c2128;border-left:3px solid #3fb950;padding:0.6rem 0.8rem;border-radius:0 6px 6px 0;font-size:0.83rem;color:#c9d1d9;margin-top:0.6rem}
+.summary::before{content:"📝 "}
+.impact{background:#0d281f;border-left:3px solid #3fb950;padding:0.6rem 0.8rem;border-radius:0 6px 6px 0;font-size:0.83rem;color:#c9d1d9;margin-top:0.6rem}
+.impact::before{content:"💡 "}
+.warn{background:#2d1f0f;border:1px solid #f0883e44;border-radius:6px;padding:0.6rem 0.8rem;font-size:0.78rem;color:#f0883e;margin-top:0.6rem}
+.warn::before{content:"⚠️ "}
+.ref{background:#21262d;border:1px solid #30363d;border-radius:6px;padding:0.6rem 0.8rem;font-size:0.78rem;color:#f0883e;margin-top:0.6rem}
+.ref::before{content:"📌 "}
+.a{color:#58a6ff;word-break:break-all;font-size:0.8rem}
+.di{text-align:center;color:#484f58;font-size:0.75rem;margin-top:2.5rem;padding-top:1rem;border-top:1px solid #21262d;line-height:1.8}
+</style>
+</head>
+<body>
+<div class="c">
+<div class="h">
+  <h1>📅 MIMIC-IV 重症文献日报</h1>
+  <div class="m">推送日期：2026-04-08 &nbsp;|&nbsp; 来源：Crossref &nbsp;|&nbsp; 共 10 篇</div>
+  <div class="br">
+    <span class="b">MIMIC-IV</span><span class="b">重症医学</span>
+    <span class="b">机器学习</span><span class="b">脓毒症 · AKI</span>
+    <span class="b s">★ 含开题重点参考</span>
+  </div>
+</div>
+<div class="sec">
+<h2>⭐ Paper 1 | SA-AKI住院死亡率预测+SHAP（Clinical Kidney Journal 2026）| 开题参考值：⭐⭐⭐⭐⭐</h2>
+<div class="p">
+<h3>Prediction of hospital mortality in sepsis-associated acute kidney injury using a machine-learning approach: a multicenter study using SHAP interpretability analysis</h3>
+<div class="cn">基于机器学习方法预测SA-AKI住院死亡率：一项使用SHAP可解释性分析的多中心研究</div>
+<div class="meta"><span>期刊：Clinical Kidney Journal (IF≈5.1)</span><span>2026-01</span><span>DOI: 10.1093/ckj/sfaf372</span><span class="tag tm">机器学习</span><span class="tag te">SA-AKI</span><span class="tag te">SHAP</span><span class="tag te">多中心外部验证</span></div>
+<div class="item"><div class="lbl">① 纳排标准</div><div class="cont">SA-AKI患者（Sepsis-3+KDIGO标准），多中心研究（具体中心数量及样本量参照原文），回顾性提取MIMIC-IV等数据库数据，排除终末期肾病、肾移植史等。</div></div>
+<div class="item"><div class="lbl">② 变量与清洗</div><div class="cont">综合EHR数据：人口学、生命体征、实验室指标（肌酐、尿量、SOFA相关指标）、合并症、用药等。特征工程聚焦入院早期可获取指标。SHAP进行特征重要性分析。预处理：缺失值处理、标准化。</div></div>
+<div class="item"><div class="lbl">③ 模型与验证</div><div class="cont">多ML模型对比（具体参照原文），SHAP可解释性分析解释个体预测，核心指标AUROC（95%CI），多中心外部验证（参照原文验证策略）。</div></div>
+<div class="item"><div class="lbl">④ 图表设计</div><div class="cont">流程图、基线特征表、多模型AUROC对比ROC曲线、SHAP蜂群图/特征重要性图、校准曲线。</div></div>
+<div class="item"><div class="lbl">⑤ Discussion要点</div><div class="cont">SA-AKI住院死亡率预测是ICU预后核心问题；ML+SHAP提供可解释性个体化预测；与传统评分（SOFA、APACHEII）对比优势；局限为回顾性设计、多中心验证必要性。</div></div>
+<div class="impact">临床增量：多中心SA-AKI专项研究；SHAP个体化预测；相比传统评分的性能提升。</div>
+<div class="summary">多中心SA-AKI住院死亡率ML预测研究，SHAP提供可解释性分析，多中心验证增强可靠性，为SA-AKI危重患者早期风险分层提供ML工具参考。</div>
+<div class="ref">开题参考价值：⭐⭐⭐⭐⭐ | 方法学亮点：SA-AKI住院死亡率是该课题直接相关研究方向；SHAP可解释性是该课题方法学核心；多中心验证增强可靠性。</div>
+<div class="a">🔗 DOI: <a href="https://doi.org/10.1093/ckj/sfaf372" target="_blank">https://doi.org/10.1093/ckj/sfaf372</a></div>
+</div>
+</div>
+<div class="sec">
+<h2>⭐ Paper 2 | 脓毒症AKI分期预测+XGBoost/RF（Frontiers in Medicine 2025）| 开题参考值：⭐⭐⭐⭐⭐</h2>
+<div class="p">
+<h3>Stage prediction of acute kidney injury in sepsis patients using explainable machine learning approaches</h3>
+<div class="cn">基于可解释机器学习方法的脓毒症患者急性肾损伤分期预测</div>
+<div class="meta"><span>期刊：Frontiers in Medicine (IF≈3.1)</span><span>2025-10</span><span>DOI: 10.3389/fmed.2025.1667488</span><span class="tag tm">机器学习</span><span class="tag te">AKI分期</span><span class="tag te">SHAP</span></div>
+<div class="item"><div class="lbl">① 纳排标准</div><div class="cont">MIMIC-IV脓毒症患者（n=6,866，其中5,896例住院期间发生AKI）。Sepsis-3诊断，KDIGO标准分期（1/2/3期）。排除标准参照原文。</div></div>
+<div class="item"><div class="lbl">② 变量与清洗</div><div class="cont">人口学、生命体征、实验室指标、SOFA评分、BMI等。LASSO或其他方法筛选预测变量。预处理：异常值处理、缺失值插补、标准化。</div></div>
+<div class="item"><div class="lbl">③ 模型与验证</div><div class="cont">8种ML模型对比：DT、ENet、KNN、LightGBM、MLP、Multinom、RF、XGBoost。五折交叉验证。SHAP解释模型输出。RF表现最优：平均AUC=0.89。主要指标ROC-AUC。</div></div>
+<div class="item"><div class="lbl">④ 图表设计</div><div class="cont">流程图、各模型ROC曲线对比、AUC汇总表、SHAP蜂群图、特征重要性排序表。</div></div>
+<div class="item"><div class="lbl">⑤ Discussion要点</div><div class="cont">RF在AKI分期预测中表现最优（AUC=0.89）；SHAP揭示关键预测因子：尿量、BMI、SOFA评分、血尿素氮最大值；早期AKI分期预测有助于及时干预；多中心外部验证尚需开展。</div></div>
+<div class="impact">临床增量：MIMIC-IV大规模脓毒症AKI分期研究；8种ML模型系统对比；SHAP可解释性分析。</div>
+<div class="summary">6,866例脓毒症患者中5,896例发生AKI；8种ML模型对比，RF以AUC=0.89获最佳分期预测性能；SHAP揭示尿量、BMI、SOFA评分、血尿素氮为关键预测因子；为脓毒症患者AKI进展风险分层提供可解释ML工具。</div>
+<div class="ref">开题参考价值：⭐⭐⭐⭐⭐ | 方法学亮点：AKI分期预测（非仅二分类）设计精细；RF最优是该课题参考；SHAP开题必须引用；五折交叉验证规范。</div>
+<div class="a">🔗 DOI: <a href="https://doi.org/10.3389/fmed.2025.1667488" target="_blank">https://doi.org/10.3389/fmed.2025.1667488</a></div>
+</div>
+</div>
+<div class="sec">
+<h2>⭐ Paper 3 | SIMI患者sAKI预测（Scientific Reports 2025）| 开题参考值：⭐⭐⭐⭐⭐</h2>
+<div class="p">
+<h3>Machine learning models for predicting severe acute kidney injury in patients with sepsis-induced myocardial injury</h3>
+<div class="cn">预测脓毒症诱导心肌损伤患者严重急性肾损伤的机器学习模型</div>
+<div class="meta"><span>期刊：Scientific Reports (Nature IF≈4.6)</span><span>2025</span><span>DOI: 10.1038/s41598-025-04579-z</span><span class="tag tm">机器学习</span><span class="tag te">SIMI亚组</span><span class="tag te">RF最优</span></div>
+<div class="item"><div class="lbl">① 纳排标准</div><div class="cont">脓毒症诱导心肌损伤（SIMI）成年患者，来自MIMIC-IV（2008-2019年）。结局：入住ICU后7天内sAKI（KDIGO 2-3期）发生。共1,467例符合条件。</div></div>
+<div class="item"><div class="lbl">② 变量与清洗</div><div class="cont">9个预测变量入选（具体参照原文）。人口学、生命体征、实验室指标、心肌损伤标志物、器官功能指标等。数据预处理参照原文。</div></div>
+<div class="item"><div class="lbl">③ 模型与验证</div><div class="cont">5种ML模型（RF等）。RF表现最优：AUC=0.81，准确率=0.79。传统SOFA模型AUC=0.66，准确率=0.71。Bootstrap重采样或交叉验证评估。</div></div>
+<div class="item"><div class="lbl">④ 图表设计</div><div class="cont">流程图、基线特征表（sAKI组 vs 非sAKI组对比）、多模型ROC曲线对比（ML vs SOFA）、特征重要性图。</div></div>
+<div class="item"><div class="lbl">⑤ Discussion要点</div><div class="cont">SIMI患者中sAKI常见且危害严重；ML模型（尤其RF）是预测sAKI的有效工具；该研究为SIMI患者sAKI早期识别提供依据；局限为单数据库、回顾性设计。</div></div>
+<div class="impact">临床增量：首个SIMI患者sAKI的ML预测研究；ML vs SOFA直接对比；AUC 0.81良好预测性能。</div>
+<div class="summary">1,467例SIMI患者中建立sAKI预测模型，RF以AUC=0.81获最佳性能，显著优于传统SOFA评分（AUC=0.66）；ML可作为SIMI患者sAKI早期识别的有效工具，弥补传统评分的不足。</div>
+<div class="ref">开题参考价值：⭐⭐⭐⭐⭐ | 方法学亮点：SA-AKI精细表型（SIMI亚组）建模；RF最优是该课题参考；SOFA基线对比增强可信度。</div>
+<div class="a">🔗 DOI: <a href="https://doi.org/10.1038/s41598-025-04579-z" target="_blank">https://doi.org/10.1038/s41598-025-04579-z</a></div>
+</div>
+</div>
+<div class="sec">
+<h2>⭐ Paper 4 | SA-AKI CRRT时机+PSM+SHAP（Frontiers in Medicine 2025）| 开题参考值：⭐⭐⭐⭐☆</h2>
+<div class="p">
+<h3>Machine learning prediction models for mortality risk in sepsis-associated acute kidney injury: evaluating early versus late CRRT initiation</h3>
+<div class="cn">SA-AKI死亡风险ML预测模型：评估早期与晚期CRRT启动时机</div>
+<div class="meta"><span>期刊：Frontiers in Medicine (IF≈3.1)</span><span>2025-01</span><span>DOI: 10.3389/fmed.2024.1483710</span><span class="tag tm">机器学习</span><span class="tag te">CRRT时机</span><span class="tag te">PSM</span><span class="tag te">SHAP</span></div>
+<div class="item"><div class="lbl">① 纳排标准</div><div class="cont">SA-AKI患者，来自MIMIC-IV（建模）和eICU数据库（外部验证）。按CRRT启动时机分早期/晚期组。倾向性评分匹配（PSM）减少选择偏倚。具体纳排标准参照原文。</div></div>
+<div class="item"><div class="lbl">② 变量与清洗</div><div class="cont">人口学、生命体征、实验室指标、SOFA评分、CRRT时机相关指标。PSM匹配协变量：年龄、性别、合并症、疾病严重程度等。SHAP分析识别关键预后因子。</div></div>
+<div class="item"><div class="lbl">③ 模型与验证</div><div class="cont">多ML模型评估SA-AKI预后。GBM模型表现稳健（验证集和测试集平均C-index=0.694）。PSM后分析CRRT时机与生存率关联。亚组分析（SOFA评分分层：低≤10，中11-15，高>15）。SHAP分析关键预后因素。</div></div>
+<div class="item"><div class="lbl">④ 图表设计</div><div class="cont">流程图、PSM前后基线特征对比、KM生存曲线（早期 vs 晚期CRRT）、多模型C-index对比、SHAP蜂群图、亚组分析森林图。</div></div>
+<div class="item"><div class="lbl">⑤ Discussion要点</div><div class="cont">晚期CRRT启动与改善生存概率相关，但增加住院和ICU住院时间。各SOFA分层亚组结果一致，高SOFA（>15）获益最明显。最大乳酸水平、年龄、最低SpO2是最强预后预测因子。</div></div>
+<div class="impact">临床增量：MIMIC-IV+eICU双数据库；PSM规范设计；CRRT时机精准医学研究；GBM+SHAP组合。</div>
+<div class="summary">SA-AKI患者PSM分析显示晚期CRRT启动与生存改善相关，但增加住院时间。GBM模型（C-index=0.694）验证ML预测预后的可行性。SHAP显示乳酸、年龄、SpO2为主要预后因子。CRRT时机选择需个体化综合评估。</div>
+<div class="ref">开题参考价值：⭐⭐⭐⭐☆ | 方法学亮点：CRRT时机是比较疗效研究重要参考；PSM设计规范；SHAP是该课题方法学必须；eICU外部验证增强泛化性。</div>
+<div class="a">🔗 DOI: <a href="https://doi.org/10.3389/fmed.2024.1483710" target="_blank">https://doi.org/10.3389/fmed.2024.1483710</a></div>
+</div>
+</div>
+<div class="sec">
+<h2>⭐ Paper 5 | CAP+AKI 28天死亡率+CoxBoost（Scientific Reports 2025）| 开题参考值：⭐⭐⭐⭐☆</h2>
+<div class="p">
+<h3>A machine learning model for predicting 28-day mortality in ICU patients with community-acquired pneumonia and acute kidney injury</h3>
+<div class="cn">预测ICU社区获得性肺炎合并AKI患者28天死亡率的机器学习模型</div>
+<div class="meta"><span>期刊：Scientific Reports (Nature IF≈4.6)</span><span>2025</span><span>DOI: 10.1038/s41598-025-27236-x</span><span class="tag tm">机器学习</span><span class="tag te">CAP-AKI</span><span class="tag te">CoxBoost</span><span class="tag te">外部验证</span></div>
+<div class="item"><div class="lbl">① 纳排标准</div><div class="cont">入住ICU的社区获得性肺炎（CAP）合并AKI成年患者，来自MIMIC-IV和MIMIC-III数据库。主要结局为28天死亡率。</div></div>
+<div class="item"><div class="lbl">② 变量与清洗</div><div class="cont">临床特征：人口学、血管活性药物使用、NSAIDs使用、血红蛋白水平、高血压、血尿素氮等。CoxBoost模型基于Cox风险比例模型框架。Lasso-Cox作为对比。数据来自MIMIC双库联合。</div></div>
+<div class="item"><div class="lbl">③ 模型与验证</div><div class="cont">5种生存分析模型对比：Random Survival Forests、Gradient Boosting Machine、Lasso-Cox、CoxBoost、Survival-SVM。内部验证：CoxBoost最优，AUC=0.737。外部验证（MIMIC-III）：AUC=0.671。优于现有临床评分系统。决策曲线分析（DCA）评估临床获益。</div></div>
+<div class="item"><div class="lbl">④ 图表设计</div><div class="cont">流程图、基线特征表、内部验证 vs 外部验证AUROC对比、DCA曲线、特征重要性图（年龄、血管活性药物、NSAIDs、血红蛋白、高血压、BUN）。</div></div>
+<div class="item"><div class="lbl">⑤ Discussion要点</div><div class="cont">CAP合并AKI患者死亡风险显著升高。CoxBoost在内部（AUC=0.737）和外部验证（AUC=0.671）中均表现最佳。关键预测因子：年龄、血管活性药物使用、NSAIDs使用、血红蛋白、高血压和血尿素氮。开发的网络应用可床旁实时预测。</div></div>
+<div class="impact">临床增量：首个CAP-AKI专项生存预测模型；MIMIC-IV+MIMIC-III联合建模；外部验证；网络应用转化。</div>
+<div class="summary">CAP合并AKI患者28天死亡率预测模型，CoxBoost内部验证AUC=0.737、外部验证AUC=0.671，优于传统临床评分系统。关键预测因子为年龄、血管活性药物、NSAIDs、血红蛋白、高血压、BUN。网络应用实现床旁实时预测。</div>
+<div class="ref">开题参考价值：⭐⭐⭐⭐☆ | 方法学亮点：生存分析（Time-to-event）建模；外部验证增强泛化性；DCA临床决策曲线；网络应用转化思路可借鉴。</div>
+<div class="a">🔗 DOI: <a href="https://doi.org/10.1038/s41598-025-27236-x" target="_blank">https://doi.org/10.1038/s41598-025-27236-x</a></div>
+</div>
+</div>
+<div class="sec">
+<h2>⭐ Paper 6 | 中重度SA-AKI双时间点+多区域验证（JMIR 2026）| 开题参考值：⭐⭐⭐⭐⭐</h2>
+<div class="p">
+<h3>Prediction of Moderate-to-Severe Sepsis-Associated Acute Kidney Injury Using a Dual-Timepoint Machine Learning Model</h3>
+<div class="cn">使用双时间点机器学习模型预测中重度SA-AKI：开发、多区域验证及临床部署研究</div>
+<div class="meta"><span>期刊：Journal of Medical Internet Research (IF≈5.1)</span><span>2026</span><span>DOI: 10.2196/73840</span><span class="tag tm">机器学习</span><span class="tag te">SA-AKI中重度</span><span class="tag te">双时间点</span><span class="tag te">多区域验证</span></div>
+<div class="item"><div class="lbl">① 纳排标准</div><div class="cont">SA-AKI患者（KDIGO指南2-3期，即中重度AKI）。多中心研究。脓毒症诊断采用Sepsis-3标准，AKI诊断采用KDIGO标准。排除既往ESRD、肾移植等。</div></div>
+<div class="item"><div class="lbl">② 变量与清洗</div><div class="cont">识别SA-AKI进展的关键时间节点。提取入院时及特定时间点临床特征。动态建模策略（双时间点）。特征选择方法参照原文。</div></div>
+<div class="item"><div class="lbl">③ 模型与验证</div><div class="cont">双时间点ML模型预测中重度SA-AKI。多区域验证（multiregional validation）增强泛化性。临床部署研究（clinical deployment）验证实用性。主要指标：AUROC、敏感性、特异性。</div></div>
+<div class="item"><div class="lbl">④ 图表设计</div><div class="cont">流程图、特征重要性图、双时间点模型架构图、多区域验证AUROC对比、临床部署实施界面。</div></div>
+<div class="item"><div class="lbl">⑤ Discussion要点</div><div class="cont">现有SA-AKI预测模型缺乏严重程度分层和动态预测能力。双时间点模型可捕捉疾病进展动态特征。多区域验证确保模型泛化性。临床部署研究验证实际应用价值。</div></div>
+<div class="impact">临床增量：双时间点动态预测设计；多区域验证；临床部署研究（转化价值高）。</div>
+<div class="summary">针对SA-AKI中重度（KDIGO 2-3期）开发双时间点ML预测模型，进行多区域验证和临床部署研究。填补现有模型缺乏严重程度分层和动态预测能力的空白。为SA-AKI早期干预提供精准工具。</div>
+<div class="ref">开题参考价值：⭐⭐⭐⭐⭐ | 方法学亮点：SA-AKI中重度分层是该课题参考表型；双时间点动态预测设计精细；多区域验证是该课题应追求的目标；临床部署思维超前。</div>
+<div class="a">🔗 DOI: <a href="https://doi.org/10.2196/73840" target="_blank">https://doi.org/10.2196/73840</a></div>
+</div>
+</div>
+<div class="sec">
+<h2>Paper 7-10 概要</h2>
+<div class="p">
+<h3>Paper 7 | 脓毒症早期死亡率预测（LASSO+7算法对比）| 开题参考：⭐⭐⭐☆☆</h3>
+<div class="cn">DIGITAL HEALTH 2026 | DOI: 10.1177/20552076261422630</div>
+<div class="item"><div class="lbl">核心信息</div><div class="cont">ICU脓毒症患者入院时28天死亡率预测。7种ML算法对比，LASSO筛选关键变量。为脓毒症早期风险分层提供参考（但非SA-AKI专项）。</div></div>
+<div class="ref">方法学警示：脓毒症广义预测非SA-AKI专项，LASSO筛选是该课题参考方法，可作为SA-AKI预测的背景参考。</div>
+<div class="a">🔗 <a href="https://doi.org/10.1177/20552076261422630" target="_blank">https://doi.org/10.1177/20552076261422630</a></div>
+</div>
+<div class="p">
+<h3>Paper 8 | 脓毒症个性化诺模图（可解释ML）| 开题参考：⭐⭐⭐☆☆</h3>
+<div class="cn">Clinics 2026 | DOI: 10.1016/j.clinsp.2026.100872</div>
+<div class="item"><div class="lbl">核心信息</div><div class="cont">脓毒症个性化死亡率可解释ML诺模图研究，诺模图作为可视化工具整合关键预测因子，实现个性化风险评估，为床旁决策提供直观参考（非SA-AKI专项）。</div></div>
+<div class="ref">方法学亮点：诺模图可视化是该课题SA-AKI死亡率可参考形式；但非SA-AKI专项；可作为预测工具展示形式参考。</div>
+<div class="a">🔗 <a href="https://doi.org/10.1016/j.clinsp.2026.100872" target="_blank">https://doi.org/10.1016/j.clinsp.2026.100872</a></div>
+</div>
+<div class="p">
+<h3>Paper 9 | SA-AKI MAKE深度学习动态预测 | 开题参考：⭐⭐⭐⭐☆</h3>
+<div class="cn">Journal of Critical Care 2025 | DOI: 10.1016/j.jcrc.2024.154971</div>
+<div class="item"><div class="lbl">核心信息</div><div class="cont">SA-AKI患者主要肾脏不良事件（MAKE：透析+肾功能持续丧失+死亡复合终点）的深度学习动态预测研究。深度学习处理时间序列数据优于静态ML模型，为SA-AKI实时动态风险监测提供新范式。</div></div>
+<div class="ref">方法学亮点：深度学习时序建模是该课题潜在方向（但XGBoost+SHAP为主）；MAKE复合终点是开题可参考的结局定义；动态预测思维超前。</div>
+<div class="a">🔗 <a href="https://doi.org/10.1016/j.jcrc.2024.154971" target="_blank">https://doi.org/10.1016/j.jcrc.2024.154971</a></div>
+</div>
+<div class="p">
+<h3>Paper 10 | MIMIC-III脓毒症死亡率SHAP/LIME | 开题参考：⭐⭐⭐☆☆</h3>
+<div class="cn">EngMedicine 2026 | DOI: 10.1016/j.engmed.2025.100118</div>
+<div class="item"><div class="lbl">核心信息</div><div class="cont">基于MIMIC-III数据库的脓毒症患者死亡率ML预测研究。SHAP/LIME可解释性方法识别关键预测因子（非MIMIC-IV，为MIMIC-III）。</div></div>
+<div class="ref">方法学警示：MIMIC-III非MIMIC-IV；可解释性方法是该课题核心；可作为SA-AKI死亡率预测的背景参考。</div>
+<div class="a">🔗 <a href="https://doi.org/10.1016/j.engmed.2025.100118" target="_blank">https://doi.org/10.1016/j.engmed.2025.100118</a></div>
+</div>
+</div>
+<div class="di">
+📌 本日报含10篇MIMIC-IV/重症医学文献（2026年优先）<br>
+⚠️ 部分为预印本，建议正式发表后以PMID引用<br>
+★ Paper 1/2/3/6 为开题最高优先级参考文献<br>
+Generated by OpenClaw 文献日报 Agent | 数据来源：Crossref API
+</div>
+</div>
+</body>
+</html>
